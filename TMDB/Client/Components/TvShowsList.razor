@@ -1,0 +1,27 @@
+<MudGrid Spacing="2" Justify="Justify.Center">
+    @if (TvShow.Count == 0)
+    {
+        for (var i = 0; i < 20; i++)
+        {
+           <Skeleton/>
+        }
+    }
+    else
+    {
+        @foreach (var items in TvShow)
+        {
+            <IndividualTvShows TvShow="items"/>
+        }
+    }
+</MudGrid>
+
+
+
+
+
+
+
+
+@code {
+    [Parameter] public List<TvShow> TvShow { get; set; }
+}

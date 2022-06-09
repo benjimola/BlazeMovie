@@ -1,0 +1,47 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@*@inject ILocalStorageService LocalStorage
+*@
+<MudThemeProvider Theme="_CurrentTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+
+<MudLayout>
+    <Toolbar />
+  
+
+        <MudContainer Class="gap-0 pd-0 relative">
+            @Body
+        </MudContainer>
+
+</MudLayout>
+
+@code {
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _CurrentTheme = DarkTheme;
+
+    }
+
+
+    private MudTheme _CurrentTheme = null;
+
+    MudTheme DarkTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            //AppbarBackground = "#1a1a27",
+            Background = "#1a1a27",
+            Primary = "#b2b0bf",
+            AppbarText = "#b2b0bf",
+            TextPrimary = "#b2b0bf",
+            DrawerBackground = "#1a1a27",
+
+
+        }
+    };
+
+}
+

@@ -1,0 +1,22 @@
+﻿@page "/counter"
+
+<PageTitle>TMDB - Tv Shows</PageTitle>
+
+<TvShowsList TvShow="tvShows" />
+
+
+@code {
+    private List<TvShow> tvShows = new List<TvShow>();
+
+
+    protected override async Task OnInitializedAsync(){
+        TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
+        var response = await client.GetTvShowListAsync(0, null, default);
+        foreach (var item in response.Results){
+            tvShows.Add(new TvShow{
+                Name = item.Name,
+                PosterPath = item.PosterPath
+            });
+        }
+    }
+}

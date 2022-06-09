@@ -1,0 +1,71 @@
+@* @* <MudContainer class="Gradient-Container">
+    <MudContainer Class="Gradient-Left-Outer">
+    <MudContainer Class="Gradient-Left-Inner"/>
+    </MudContainer>
+    <MudImage Class="Gradient_Image_fullscreen"
+    Src="https://www.themoviedb.org/t/p/original/ik9SVGcYxKg6y2a9cW0e0WchImW.jpg" />
+    </MudContainer>
+*@
+
+<div class="container1">
+    <div class="red1"></div>
+    <div class="blue1"></div>
+    <div class="green1"></div>
+    <div class="yellow1"></div>
+    <img class="img1" src="https://www.themoviedb.org/t/p/original/czffzEgaBko4mXW84B1J1EnQBzo.jpg">
+</div>
+
+
+
+
+
+
+
+<style>
+    .container1 {
+        height: 550px;
+        width: 100%;
+        position: relative;
+    }
+
+    .img1 {
+        height: 550px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .red1 {
+        height: inherit;
+        width: 50%;
+        background-image: linear-gradient(to left, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.7),
+                rgba(26, 26, 39, 0.9), rgba(26, 26, 39, 1));
+        position: absolute;
+        left: 5;
+    }
+
+    .blue1 {
+        height: 25%;
+        width: inherit;
+        background-image: linear-gradient(to top, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
+                rgba(26, 26, 39, 1));
+        position: absolute;
+    }
+
+    .green1 {
+        height: inherit;
+        width: 30%;
+        background-image: linear-gradient(to right, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
+                rgba(26, 26, 39, 1));
+        position: absolute;
+        right: 0;
+    }
+
+    .yellow1 {
+        height: 35%;
+        width: inherit;
+        background-image: linear-gradient(to bottom, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
+                rgba(26, 26, 39, 1));
+        position: absolute;
+        bottom: 0;
+    }
+</style>

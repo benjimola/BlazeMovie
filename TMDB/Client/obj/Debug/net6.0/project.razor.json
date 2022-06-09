@@ -1,0 +1,91 @@
+{
+  "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\TMDB.Client.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "6.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 1000
+  },
+  "RootNamespace": "TMDB.Client",
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Components\\Skeleton.razor",
+      "TargetPath": "Components\\Skeleton.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Components\\IndividualTvShows.razor",
+      "TargetPath": "Components\\IndividualTvShows.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Shared\\Toolbar.razor",
+      "TargetPath": "Shared\\Toolbar.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Components\\Carosel.razor",
+      "TargetPath": "Components\\Carosel.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Components\\IndividualMovies.razor",
+      "TargetPath": "Components\\IndividualMovies.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Components\\TvShowsList.razor",
+      "TargetPath": "Components\\TvShowsList.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Components\\MoviesList.razor",
+      "TargetPath": "Components\\MoviesList.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Client\\Components\\HeroImage.razor",
+      "TargetPath": "Components\\HeroImage.razor",
+      "FileKind": "component"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

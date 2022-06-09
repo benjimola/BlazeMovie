@@ -1,0 +1,127 @@
+<MudCarousel Style="height:550px;" ShowArrows="@arrows" ShowBullets="@bullets" AutoCycle="@autocycle" TData="object">
+   @foreach (var item in _carousel)
+   {
+                 <MudCarouselItem  Transition="Transition.Fade">  
+           <div class="container1">
+               <div  class="caption1">
+        <MudCard style="background-color:transparent;" Elevation="0">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h5">@item.Title </MudText>
+            
+        </CardHeaderContent>
+        
+    </MudCardHeader>
+    <MudCardContent>
+        <MudText Typo="Typo.caption">@item.Overview</MudText>
+    </MudCardContent>
+  <MudCardActions>
+        <MudIconButton Variant="Variant.Outlined" Size="Size.Large" Icon="@Icons.Material.Outlined.PlayArrow" Color="Color.Primary"/>
+    </MudCardActions>
+</MudCard>
+    </div>
+    <div class="red1"></div>
+    <div class="blue1"></div>
+    <div class="green1"></div>
+    <div class="yellow1"></div>
+    
+    
+        <img class="img1" src="@(imageUrl + item.PosterPath)">
+</div>         
+         </MudCarouselItem>
+        
+   }   
+</MudCarousel>
+<br />
+
+
+@code{
+
+    private const string imageUrl = "https://image.tmdb.org/t/p/w1280/";
+    
+    List<Movie> _carousel = new List<Movie>();
+    private bool arrows = true;
+    private bool bullets = false;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    protected override async Task OnInitializedAsync()
+    {
+        TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
+        var response = await client.GetMovieNowPlayingListAsync(null, 0, null, default);
+
+        foreach (var item in response.Results)
+        {
+            _carousel.Add(new Movie
+                {
+                    Title = item.Title,
+                    PosterPath = item.BackdropPath,
+                    Overview   = item.Overview
+                    
+                });
+        } 
+    }
+} 
+
+<style>
+    .container1 {
+        height: 550px;
+        width: 100%;
+        position: relative;
+    }
+
+.caption1{
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    height: auto;
+    bottom: 0;
+    
+}
+
+    .img1 {
+        height: inherit;
+        width: 100%;
+        position: absolute;
+        right: 0;
+    }
+
+    .red1 {
+        height: inherit;
+        width: 50%;
+        background-image: linear-gradient(to left, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.7),
+                rgba(26, 26, 39, 0.9), rgba(26, 26, 39, 1));
+        position: absolute;
+        z-index: 1;
+        left: 0;
+    }
+
+    .blue1 {
+        height: 25%;
+        width: inherit;
+        background-image: linear-gradient(to top, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
+                rgba(26, 26, 39, 1));
+        position: absolute;
+         z-index: 1;
+    }
+
+    .green1 {
+        height: inherit;
+        width: 30%;
+        background-image: linear-gradient(to right, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
+                rgba(26, 26, 39, 1));
+        position: absolute;
+        right: 0;
+         z-index: 1;
+    }
+
+    .yellow1 {
+        height: 35%;
+        width: inherit;
+        background-image: linear-gradient(to bottom, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
+                rgba(26, 26, 39, 1));
+        position: absolute;
+        bottom: 0;
+         z-index: 1;
+    }
+</style>

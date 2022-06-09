@@ -1,0 +1,40 @@
+<MudToolBar Dense="true">
+        <MudSpacer />
+        <MudButton ButtonType="ButtonType.Button" Href="index" Color="_MovieActive" Class="mr-5">Movie</MudButton>
+        <MudButton ButtonType="ButtonType.Button" Href="counter" Color="_CountActive" Class="mr-5">TV Series</MudButton>
+        <MudButton ButtonType="ButtonType.Button" Href="fetchdata" Color="_FetchActive" Class="mr-5">Fetch Data
+        </MudButton>
+        <MudSpacer />
+        <div class="d-flex">
+            <MudToggleIconButton @bind-Toggled="@_isOpen" Icon="@Icons.Material.Outlined.Search" Color="Color.Inherit"
+                ToggledIcon="@Icons.Material.Outlined.Search" ToggledColor="@Color.Secondary" />
+            <MudPopover Class="d-flex flex-column pa-1" Paper="false" Elevation="0" Open="@_isOpen"
+                AnchorOrigin="Origin.CenterLeft" TransformOrigin="Origin.CenterRight">
+
+                <MudTextField @bind-Value="TextValue" Label="Search" Variant="Variant.Outlined" Margin="Margin.Dense">
+                </MudTextField>
+
+            </MudPopover>
+        </div>
+
+        <MudIconButton Icon="@Icons.Material.Outlined.Notifications" Color="Color.Inherit" />
+        <MudIconButton Icon="@Icons.Material.Outlined.PushPin" Color="Color.Inherit" />
+        <MudIconButton Icon="@Icons.Material.Outlined.PeopleAlt" Color="Color.Inherit" />
+        <MudIconButton Icon="@Icons.Material.Outlined.MoreVert" Color="Color.Inherit" />
+    </MudToolBar>
+
+    @code{
+        public bool _isOpen;
+    public string? TextValue { get; set; }
+    Color _CountActive = Color.Inherit;
+    Color _MovieActive = Color.Inherit;
+    Color _FetchActive = Color.Inherit;
+    public void ToggleOpen()
+    {
+        if (_isOpen)
+            _isOpen = false;
+        else
+            _isOpen = true;
+    }
+
+    }
