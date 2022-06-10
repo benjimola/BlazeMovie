@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3tMFF7vbsA4I1kA0DLAdJu+L6mS9LCE+FFkfK0c5pgvLLoZ5O6szV7ST93oOJOLH5/amKfsLALc8Vkv4U6b2eA==",
+  "dgSpecHash": "EeV7yu4Dm86cHhZ+hSvhUi3E1I3zhIbdk+34PxqRNY2rkFB95+YYneQ6kfdUC2F4JWuJiIXRIYQS3/2Pvo7dsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\benja\\source\\repos\\TMDB\\tmdb\\Shared\\TMDB.Shared.csproj",
+  "projectFilePath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\benja\\.nuget\\packages\\blazored.localstorage\\4.3.0-preview.1\\blazored.localstorage.4.3.0-preview.1.nupkg.sha512",
     "C:\\Users\\benja\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.0\\microsoft.aspnetcore.authorization.6.0.0.nupkg.sha512",

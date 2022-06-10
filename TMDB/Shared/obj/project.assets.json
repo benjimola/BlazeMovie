@@ -3225,11 +3225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Shared\\TMDB.Shared.csproj",
+      "projectUniqueName": "c:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj",
       "projectName": "TMDB.Shared",
-      "projectPath": "C:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Shared\\TMDB.Shared.csproj",
+      "projectPath": "c:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj",
       "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benja\\source\\repos\\TMDB\\TMDB\\Shared\\obj\\",
+      "outputPath": "c:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",

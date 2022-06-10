@@ -1,24 +1,19 @@
 <MudItem xs="6" sm="2">
     <MudCard Outlined="true" Style="background-color:#1e1e2d">
 
-<MudTooltip>
-    <ChildContent>
-       
-    </ChildContent>
-    <TooltipContent>
-        <MudText Typo="Typo.h6">h6 title</MudText>
-        <MudText Typo="Typo.body2">body2 content</MudText>
-        <MudIcon Icon="@Icons.Material.Filled.Star" />
-    </TooltipContent>
-</MudTooltip>
-
-
-
-
-        
+        <MudCardMedia class="img" Image="@("https://www.themoviedb.org/t/p/w220_and_h330_face/"+ @TvShow.PosterPath)"
+            Height="262" />
+        <MudCardContent>
+            <MudText Style="overflow:hidden; white-space: nowrap; text-overflow:ellipsis;" Align="Align.Inherit"
+                Typo="Typo.body2">@TvShow.Name</MudText>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
+            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+        </MudCardActions>
     </MudCard>
 </MudItem>
 
-@code{
-    [Parameter]public TvShow TvShow { get; set; }
+@code {
+    [Parameter] public TvShow? TvShow { get; set; }
 }

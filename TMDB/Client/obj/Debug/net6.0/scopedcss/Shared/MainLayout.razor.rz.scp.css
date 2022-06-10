@@ -1,0 +1,25 @@
+/*.mud-appbar {
+    width: 100%;
+    display: flex;
+    z-index: var(--mud-zindex-appbar);
+    position: relative;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-direction: column;
+    color: #726262 !important;
+    background-color: #191824 !important;
+    transition: margin 225ms cubic-bezier(0,0,.2,1) 0ms,width 225ms cubic-bezier(0,0,.2,1) 0ms;
+}
+.mud-theme-primary {
+    color: #726262 !important;
+    background-color: #191824 !important;
+}*/
+
+/* ::after .m-button{
+    background-color: rebeccapurple;
+} */
+
+/* body{
+ background-image: url("https://cdn.dstv.com/dstvcms/2022/06/05/survivor16x9_xlrg.jpg") !important;
+
+} */

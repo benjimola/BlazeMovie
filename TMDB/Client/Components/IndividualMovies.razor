@@ -1,22 +1,18 @@
-                <MudItem xs="6" sm="2">                   
-                        <MudCard  Outlined="true" Style="background-color:#1e1e2d" >
-
-                            <MudCardMedia Image="@("https://www.themoviedb.org/t/p/w220_and_h330_face/"+ @Movie.PosterPath)" 
-                            Height="262"/>                    
-                        <MudCardContent>
-                          
-                                <MudText Style="overflow:hidden; white-space: nowrap; text-overflow:ellipsis;" Align="Align.Inherit" Typo="Typo.body2">@Movie.Title</MudText>
-
-                            
-                        </MudCardContent>
-                        <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                        </MudCardActions>
-                    </MudCard>                           
-                </MudItem>
+<MudItem xs="6" sm="2">
+    <MudCard Outlined="true" Style="background-color:#1e1e2d">
+        <MudCardMedia Image="@("https://www.themoviedb.org/t/p/w220_and_h330_face/"+ @Movie.PosterPath)" Height="262" />
+        <MudCardContent>
+            <MudText Style="overflow:hidden; white-space: nowrap; text-overflow:ellipsis;" Align="Align.Inherit"
+                Typo="Typo.body2">@Movie.Title</MudText>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
+            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+        </MudCardActions>
+    </MudCard>
+</MudItem>
 
 
 @code {
-    [Parameter]public Movie Movie{get; set;}
+    [Parameter] public Movie? Movie { get; set; }
 }

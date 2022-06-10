@@ -10,3 +10,15 @@ C:\Users\benja\source\repos\TMDB\tmdb\Shared\obj\Debug\net6.0\TMDB.Shared.dll
 C:\Users\benja\source\repos\TMDB\tmdb\Shared\obj\Debug\net6.0\refint\TMDB.Shared.dll
 C:\Users\benja\source\repos\TMDB\tmdb\Shared\obj\Debug\net6.0\TMDB.Shared.pdb
 C:\Users\benja\source\repos\TMDB\tmdb\Shared\obj\Debug\net6.0\ref\TMDB.Shared.dll
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\bin\Debug\net6.0\TMDB.Shared.deps.json
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\bin\Debug\net6.0\TMDB.Shared.dll
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\bin\Debug\net6.0\TMDB.Shared.pdb
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.csproj.AssemblyReference.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.AssemblyInfoInputs.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.AssemblyInfo.cs
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.csproj.CoreCompileInputs.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.dll
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\refint\TMDB.Shared.dll
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.pdb
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\ref\TMDB.Shared.dll
