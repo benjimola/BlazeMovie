@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[6.0.9, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2-beta1, )"
+            },
             "TMDbLib": {
               "target": "Package",
               "version": "[1.9.2, )"
@@ -131,6 +135,10 @@
             "Blazored.LocalStorage": {
               "target": "Package",
               "version": "[4.3.0-preview.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2-beta1, )"
             },
             "TMDbLib": {
               "target": "Package",

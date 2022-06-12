@@ -54,10 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Pages/TvShows.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHZTaG93cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -73,6 +69,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-yrxt2dwu3t
 
 [C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=

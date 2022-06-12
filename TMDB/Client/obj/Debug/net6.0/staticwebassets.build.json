@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jH7TF0PQbqGvbOg9JhwylmQN1Nsv7+Q1JN3gZDChiqI=",
+  "Hash": "+f/PUPbUj8NJp10VvfO9keHnlswTlSlngb2BWXhIcxE=",
   "Source": "TMDB.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -153,23 +153,6 @@
       "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
-      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "TMDB.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt.dat"
-    },
-    {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "TMDB.Client",
       "SourceType": "Computed",
@@ -219,6 +202,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "TMDB.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -745,7 +745,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\newtonsoft.json\\9.0.1\\lib\\netstandard1.0\\Newtonsoft.Json.dll"
+      "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\newtonsoft.json\\13.0.2-beta1\\lib\\net6.0\\Newtonsoft.Json.dll"
     },
     {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.AppContext.dll",
@@ -4573,23 +4573,6 @@
       "OriginalItemSpec": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.HttpListener.dll"
     },
     {
-      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\obj\\Debug\\net6.0\\build-gz\\DUbQUkJF.gz",
-      "SourceId": "TMDB.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Newtonsoft.Json.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll"
-    },
-    {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\obj\\Debug\\net6.0\\build-gz\\dy6kxLRz.gz",
       "SourceId": "TMDB.Client",
       "SourceType": "Computed",
@@ -5642,6 +5625,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll"
+    },
+    {
+      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\obj\\Debug\\net6.0\\build-gz\\LtzlViJb.gz",
+      "SourceId": "TMDB.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll"
     },
     {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\obj\\Debug\\net6.0\\build-gz\\m3d2ogmx.gz",

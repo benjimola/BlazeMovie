@@ -9,6 +9,7 @@
 	<ItemGroup>
 		<PackageReference Include="Blazored.LocalStorage" Version="4.3.0-preview.1" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.4" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta1" />
 		<PackageReference Include="TMDbLib" Version="1.9.2" />
 	</ItemGroup>
 

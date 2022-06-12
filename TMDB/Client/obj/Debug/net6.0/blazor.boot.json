@@ -31,7 +31,7 @@
       "Microsoft.JSInterop.dll": "sha256-jk2\/Vyub2GwMGkeIaCH7i0wYYpcirlDPEBjrjmB47Es=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-9fmAKBOzIs7ySpwatFoAUhMgaJtTQvGN5+TArCHX9QE=",
       "MudBlazor.dll": "sha256-oV5evFPPiCC6XFvrJAIop2T9eieJTfVxZkyo72WLRHM=",
-      "Newtonsoft.Json.dll": "sha256-XZbuUbKv9ZIDnuvC7SA9n1X935wIgvs00\/DgeDdJVKU=",
+      "Newtonsoft.Json.dll": "sha256-E\/xmtOMsDS2ggEXVCY5TXfqnlIYSH0kr858NcpJCOO4=",
       "System.IO.Pipelines.dll": "sha256-OXr1SqT\/FRQmnxVa6n811yUyJraU4tzQs5skNCiDmiM=",
       "TMDbLib.dll": "sha256-jjMgP8kbErGDaTCqUVoMkOeLrODkQtznn0MLHnoakI4=",
       "Microsoft.CSharp.dll": "sha256-DTiQAlsyxleRzVYl5Q95n\/wAbxwMf5CzRWBGSNndce4=",
@@ -200,15 +200,15 @@
       "mscorlib.dll": "sha256-ghlJNtzzYlKIliGPuf0A0Yu6dmLycSx3F9uyeddFb\/g=",
       "netstandard.dll": "sha256-qpOz\/RBwhlIYfaE2GDEmjiproxkvSf2b9GeqHxvH+lg=",
       "System.Private.CoreLib.dll": "sha256-sfzSZ3YKC2rpF77TVOKLuPgQag93QXr9U4AUc9d\/LKA=",
-      "TMDB.Shared.dll": "sha256-G3a5uwemCOfSWYObuQU5Kbv\/W0uMdXCZhN7NdiuWMQE=",
-      "TMDB.Client.dll": "sha256-e7AklWdEzq27jQT0gC\/wpHalL0EqDJb3W+KUnvbzlGM="
+      "TMDB.Shared.dll": "sha256-TCijgw4s6Bi2tFXjilID\/Wrqe3vx2xbCHmdchbcj8I4=",
+      "TMDB.Client.dll": "sha256-3\/OccDtJVAx9aKcDoLXmxz+SnO7yh+1c4hCU4wGlgII="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "TMDB.Shared.pdb": "sha256-UglOQ3lZQ7ZMJ7sCGnXrRRWeXR48jG1gmNuWg7pKqyY=",
-      "TMDB.Client.pdb": "sha256-hA7XoOjDN4wJI6F6QoXnaADHhbMJ9G29tGHEaKPyaFc="
+      "TMDB.Shared.pdb": "sha256-N0ZEkNC47kPZ2wvCVePT1EuyJgufEGYHyl63jRAoKKo=",
+      "TMDB.Client.pdb": "sha256-vpRV8NI62BfU47eSSGEvVOOzCfvRNlO6Y\/FeXQvEEek="
     },
     "runtime": {
       "dotnet.6.0.5.uhkw7xwhxy.js": "sha256-783uOt0jgblQfP6Yz5TJeuW2xxtl6UHZQPngZtCz79U=",
