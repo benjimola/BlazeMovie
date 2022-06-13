@@ -9,16 +9,16 @@
 
 <MudLayout>
     <Toolbar />
-  
 
-        <MudContainer Class="gap-0 pd-0 relative">
-            @Body
-        </MudContainer>
+
+    <MudContainer Class="gap-0 pd-0 relative">
+        @Body
+    </MudContainer>
 
 </MudLayout>
 
 @code {
-    
+
     protected override async Task OnInitializedAsync()
     {
         _CurrentTheme = DarkTheme;
@@ -38,11 +38,9 @@
             AppbarText = "#b2b0bf",
             TextPrimary = "#b2b0bf",
             DrawerBackground = "#1a1a27",
-            Tertiary = "#7e6fff"
-
+            Tertiary = "#7e6fff",
 
         }
     };
 
 }
-

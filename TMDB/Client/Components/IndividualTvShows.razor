@@ -1,16 +1,17 @@
 <MudItem xs="6" sm="2">
     <MudCard Outlined="true" Style="background-color:#1e1e2d">
-
-        <MudCardMedia class="img" Image="@("https://www.themoviedb.org/t/p/w220_and_h330_face/"+ @TvShow.PosterPath)"
-            Height="262" />
-        <MudCardContent>
-            <MudText Style="overflow:hidden; white-space: nowrap; text-overflow:ellipsis;" Align="Align.Inherit"
-                Typo="Typo.body2">@TvShow.Name</MudText>
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-        </MudCardActions>
+        <MudLink href="#">
+            <MudCardMedia class="img"
+                Image="@("https://www.themoviedb.org/t/p/w220_and_h330_face/"+ @TvShow.PosterPath)" Height="262" />
+            <MudCardContent>
+                <MudText Style="overflow:hidden; white-space: nowrap; text-overflow:ellipsis;" Align="Align.Inherit"
+                    Typo="Typo.body2">@TvShow.Name</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
+                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+            </MudCardActions>
+        </MudLink>
     </MudCard>
 </MudItem>
 

@@ -11,7 +11,7 @@
 <div class="pagination-container">
 
     <MudPagination Selected="Page" SelectedChanged="pageChanged" class="pa-4" Color="Color.Tertiary"
-        Variant="Variant.Outlined" Count="10000" />
+        Variant="Variant.Outlined" Count="TotalPage" />
 </div>
 
 
@@ -20,6 +20,7 @@
 @code {
     public List<Movie> movies = new List<Movie>();
     [Parameter] public int Page { get; set; } = 1;
+    [Parameter] public int TotalPage { get; set; } = 500;
     private void pageChanged(int i)
     {
         Page = i;
@@ -27,22 +28,12 @@
     }
     protected override void OnInitialized()
     {
+        if (Page < 1)
+        {
+            Page = 1;
+        }
 
         GetMovies(Page);
-        @* TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
-            var response = await client.GetMoviePopularListAsync(null, Page, null, default);
-
-            foreach (var item in response.Results)
-            {
-            movies.Add(new Movie
-            {
-            Title = item.Title,
-            PosterPath = item.PosterPath
-            });
-            }
-        *@
-        //PosterPath = "https://www.themoviedb.org/t/p/w220_and_h330_face/neMZH82Stu91d3iqvLdNQfqPPyl.jpg"
-
     }
 
     private async void GetMovies(int page)
@@ -54,7 +45,6 @@
     {
         movies.Clear();
         movies = await Http.GetFromJsonAsync<List<Movie>>($"/api/Movie/GetMovies/{Page}");
-
     }
 }
 
@@ -69,6 +59,4 @@
         justify-content: center;
         align-items: center;
     }
-
-    .pagination {}
 </style>

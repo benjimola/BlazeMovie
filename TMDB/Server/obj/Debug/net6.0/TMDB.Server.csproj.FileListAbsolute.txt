@@ -1,3 +1,11 @@
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.csproj.AssemblyReference.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.AssemblyInfoInputs.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.AssemblyInfo.cs
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.csproj.CoreCompileInputs.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.RazorAssemblyInfo.cache
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.RazorAssemblyInfo.cs
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\bin\Debug\net6.0\TMDB.Client.staticwebassets.runtime.json
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\bin\Debug\net6.0\appsettings.json
@@ -32,14 +40,6 @@ C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\bin\Debug\net6.0\TMDB.Cli
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\bin\Debug\net6.0\TMDB.Shared.dll
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\bin\Debug\net6.0\TMDB.Client.pdb
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\bin\Debug\net6.0\TMDB.Shared.pdb
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.csproj.AssemblyReference.cache
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.AssemblyInfoInputs.cache
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.AssemblyInfo.cs
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.csproj.CoreCompileInputs.cache
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.RazorAssemblyInfo.cache
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\TMDB.Server.RazorAssemblyInfo.cs
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Server\obj\Debug\net6.0\scopedcss\bundle\TMDB.Server.styles.css

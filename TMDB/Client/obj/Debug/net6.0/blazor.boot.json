@@ -201,14 +201,14 @@
       "netstandard.dll": "sha256-qpOz\/RBwhlIYfaE2GDEmjiproxkvSf2b9GeqHxvH+lg=",
       "System.Private.CoreLib.dll": "sha256-sfzSZ3YKC2rpF77TVOKLuPgQag93QXr9U4AUc9d\/LKA=",
       "TMDB.Shared.dll": "sha256-TCijgw4s6Bi2tFXjilID\/Wrqe3vx2xbCHmdchbcj8I4=",
-      "TMDB.Client.dll": "sha256-3\/OccDtJVAx9aKcDoLXmxz+SnO7yh+1c4hCU4wGlgII="
+      "TMDB.Client.dll": "sha256-lmDHgTvBy\/sB9\/dFJ9E4Y2xNBnqFCFzerLcSjR94z3o="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "TMDB.Shared.pdb": "sha256-N0ZEkNC47kPZ2wvCVePT1EuyJgufEGYHyl63jRAoKKo=",
-      "TMDB.Client.pdb": "sha256-vpRV8NI62BfU47eSSGEvVOOzCfvRNlO6Y\/FeXQvEEek="
+      "TMDB.Client.pdb": "sha256-y8lQsrMayk3eXqb8FMdOY3n\/A+xgirS6lsx\/Cs5ZB+g="
     },
     "runtime": {
       "dotnet.6.0.5.uhkw7xwhxy.js": "sha256-783uOt0jgblQfP6Yz5TJeuW2xxtl6UHZQPngZtCz79U=",
