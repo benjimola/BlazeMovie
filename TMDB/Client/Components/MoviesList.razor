@@ -1,5 +1,5 @@
 ﻿
-    <MudGrid Class="" Spacing="2" Justify="Justify.Center">
+    <MudGrid Class="main-grid" Spacing="2" Justify="Justify.Center">
 
         @if (Movie.Count == 0)
         {
@@ -17,7 +17,17 @@
         }
     </MudGrid>
 
+
 @code {
     private const string PosterUrl = "https://www.themoviedb.org/t/p/w220_and_h330_face/";
     [Parameter] public List<Movie>? Movie { get; set; }
 }
+
+<style>
+  .main-grid {
+       //margin: -8px;
+    margin-top: -100px;
+    z-index: 2;
+    position: relative;
+}
+</style>

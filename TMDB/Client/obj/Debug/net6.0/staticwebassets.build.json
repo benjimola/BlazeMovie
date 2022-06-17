@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+f/PUPbUj8NJp10VvfO9keHnlswTlSlngb2BWXhIcxE=",
+  "Hash": "UZyUfOo2bh4m7qjNB1D8kfIzkR9XylqUbF1LmpUqmUI=",
   "Source": "TMDB.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -153,6 +153,23 @@
       "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
+      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "TMDB.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt.dat"
+    },
+    {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "TMDB.Client",
       "SourceType": "Computed",
@@ -202,23 +219,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
-    },
-    {
-      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "TMDB.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\benja\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",

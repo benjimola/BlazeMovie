@@ -9,12 +9,11 @@
 
 <MudLayout>
     <Toolbar />
-
-
-    <MudContainer Class="gap-0 pd-0 relative">
-        @Body
-    </MudContainer>
-
+    <MudMainContent>
+        <MudContainer Class="gap-0 pd-0 relative">
+            @Body
+        </MudContainer>
+    </MudMainContent>
 </MudLayout>
 
 @code {
@@ -44,3 +43,20 @@
     };
 
 }
+
+<style>
+    media (min-width: 600px)
+    .mud-container {
+    padding-left: 0; 
+    padding-right: 0; 
+}
+.mud-container {
+    width: 100%;
+    position:relative;
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+</style>
