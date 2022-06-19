@@ -1,0 +1,132 @@
+﻿@page "/Movie/{MovieId:int}/{MovieName}"
+@inject HttpClient Http
+<PageTitle>TMDB - @movie.Title</PageTitle>
+
+
+<div class="MoveDetailnNavBar row">
+    <div class="blurcontainer" />
+    <MudCard class="DetailPoster" style="background:#1a1a27; width: 300px;  height:520px" Elevation="0">
+        <MudCardMedia Image=@("https://image.tmdb.org/t/p/w500/" + movie.PosterPath) Height="450" Width="300" />
+        <MudCardContent>
+            <MudText Typo="Typo.body2">@MovieName</MudText>
+        </MudCardContent>
+    </MudCard>
+
+
+    <MudPaper class="column pa-16 ma-2" MaxHeight="82vh" MaxWidth="45vw" Elevation="0">
+        <MudText Typo="Typo.h4">
+            <b>@movie.Title</b>
+        </MudText>
+        <span>
+            @foreach (var item in movie.Genres)
+            {
+                <MudChip Variant="Variant.Text">@item.Name</MudChip>
+            }
+            <span><Text>Duration: </Text> @movie.Runtime <text>Min</text></span>
+        </span>
+        <MudText Typo="Typo.subtitle1">@movie.Overview</MudText>
+    </MudPaper>
+</div>
+
+
+
+
+
+
+
+@* @foreach (var item in movie.Videos.Results)
+    {
+    <h3>@item.Id</h3>
+    <h3>@item.Site</h3>
+    <h3>@item.Name</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.Id" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+    } *@
+
+@* @foreach (var item in movie.Credits.Cast)
+    {
+    <h3>@item.Character</h3>
+    }
+*@
+
+
+@code {
+    [Parameter] public int? MovieId { get; set; }
+    [Parameter] public string? MovieName { get; set; }
+    private Movie? movie { get; set; } = new Movie();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        movie = await Http.GetFromJsonAsync<Movie>($"/api/Details/{MovieId}");
+    }
+
+}
+
+
+<style>
+    .row {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        padding: 0 4px;
+        z-index: 1;
+        background-color: transparent;
+        margin-top: 30px !important;
+    }
+
+    .MoveDetailnNavBar {
+        width: 100vw;
+        position: relative;
+        left: calc(-53vw + 53%);
+        height: 90vh;
+        padding: 0px;
+        background-image: url(https://www.themoviedb.org/t/p/w1280/@movie.BackdropPath);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+    }
+
+    .MoveDetailnNavBar .DetailPoster {
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+        margin-top: auto;
+        margin-bottom: auto;
+        z-index: 1;
+    }
+
+    .MoveDetailnNavBar .blurcontainer {
+        background: rgba(26, 26, 39, 0.2);
+        backdrop-filter: blur(25px);
+        float: right;
+        height: 90vh;
+        width: 100vw;
+        position: absolute;
+        right: 0;
+    }
+
+
+    .mud-main-content {
+        /* padding-top: var(--mud-appbar-height); */
+    }
+
+    .mud-main-content {
+        margin: 0;
+        flex: 1 1 auto;
+        padding-top: 0;
+        padding: 0 !important;
+    }
+</style>

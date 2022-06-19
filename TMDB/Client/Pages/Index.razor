@@ -18,20 +18,26 @@
 
 
 @code {
-    public List<Movie> movies = new List<Movie>();
-    [Parameter] public int Page { get; set; } = 1;
-    [Parameter] public int TotalPage { get; set; } = 500;
+    
+    [Parameter]
+    public int Page { get; set; } = 1;
+    
+    [Parameter] 
+    public int TotalPage { get; set; } = 500;
+    public List<Movie>? movies { get; set; } = new List<Movie>();
     private void pageChanged(int i)
     {
         Page = i;
         NavigationManager.NavigateTo($"/index/{Page}");
     }
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        if (Page <1)
+        if (Page < 1 )
         {
             Page = 1;
+            NavigationManager.NavigateTo($"/index/{Page}");
         }
+        
 
         GetMovies(Page);
     }
@@ -48,7 +54,7 @@
     }
 }
 
-<style>
+<style>   
     .pagination-container {
         margin-top: 7vh;
         margin-bottom: 7vh;
@@ -58,5 +64,5 @@
         width: inherit;
         justify-content: center;
         align-items: center;
-    }
+}
 </style>

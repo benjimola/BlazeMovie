@@ -1,15 +1,7 @@
 /* /Pages/Index.razor.rz.scp.css */
- .pagination-container[b-yrxt2dwu3t] {
-     margin-top: 7vh;
-     display: flex;
-     z-index: 9;
-     height: 7vh;
-     width: inherit;
-     justify-content: center;
-     align-items: center;
- }
 
- .pagination[b-yrxt2dwu3t] {}
+
+
 /* /Shared/MainLayout.razor.rz.scp.css */
 /*.mud-appbar {
     width: 100%;

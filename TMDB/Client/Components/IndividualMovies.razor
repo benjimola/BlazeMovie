@@ -1,9 +1,9 @@
+@inject NavigationManager NavigationManager
 
-
-<MudItem xs="6" sm="3" md="2" >
-    <a href="@Movie.Id">
+<MudItem xs="6" sm="3" md="2">
+    <div Underline="Underline.None" @onclick="ShowDetails">
         <MudCard Outlined="true" Style="background-color:#1e1e2d">
-            <MudCardMedia Image="@("https://www.themoviedb.org/t/p/w500/"+ @Movie.PosterPath)" Height="262" />
+            <MudCardMedia Image="@("https://www.themoviedb.org/t/p/w500/"+ @Movie.PosterPath)"  />
             <MudCardContent>
                 <MudText Style="overflow:hidden; white-space: nowrap; text-overflow:ellipsis;" Align="Align.Inherit"
                     Typo="Typo.body2">@Movie.Title</MudText>
@@ -13,12 +13,16 @@
                 <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
             </MudCardActions>
         </MudCard>
-    </a>
+    </div>
 </MudItem>
 
 
 
 @code {
     [Parameter] public Movie? Movie { get; set; }
-}
 
+    private void ShowDetails()
+    {
+        NavigationManager.NavigateTo($"/Movie/{@Movie.Id}/{@Movie.Title.Replace(" ", "-")}");
+    }
+}
