@@ -1778,11 +1778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\TMDB.Client.csproj",
+      "projectUniqueName": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\tmdb\\client\\TMDB.Client.csproj",
       "projectName": "TMDB.Client",
-      "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\TMDB.Client.csproj",
+      "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\tmdb\\client\\TMDB.Client.csproj",
       "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\obj\\",
+      "outputPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\tmdb\\client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1799,8 +1799,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj": {
-              "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj"
+            "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\tmdb\\Shared\\TMDB.Shared.csproj": {
+              "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\tmdb\\Shared\\TMDB.Shared.csproj"
             }
           }
         }

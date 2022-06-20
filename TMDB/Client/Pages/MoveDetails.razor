@@ -5,7 +5,7 @@
 
 <div class="MoveDetailnNavBar row">
     <div class="blurcontainer" />
-    <MudCard class="DetailPoster" style="background:#1a1a27; width: 300px;  height:520px" Elevation="0">
+    <MudCard class="DetailPoster" style=" width: 300px; height:520px" Elevation="0">
         <MudCardMedia Image=@("https://image.tmdb.org/t/p/w500/" + movie.PosterPath) Height="450" Width="300" />
         <MudCardContent>
             <MudText Typo="Typo.body2">@MovieName</MudText>
@@ -20,11 +20,37 @@
         <span>
             @foreach (var item in movie.Genres)
             {
-                <MudChip Variant="Variant.Text">@item.Name</MudChip>
+                <MudChip Color="Color.Default" Variant="Variant.Text">@item.Name</MudChip>
             }
-            <span><Text>Duration: </Text> @movie.Runtime <text>Min</text></span>
         </span>
-        <MudText Typo="Typo.subtitle1">@movie.Overview</MudText>
+        <span>Duration: @movie.Runtime <text>Min</text></span>
+        <MudDivider DividerType="DividerType.Middle" Class="my-4" />
+
+        <MudSpacer />
+        
+
+        <MudText Typo="Typo.h5">Synopsis</MudText>
+        <MudText Typo="Typo.caption"><i>@movie.Overview</i></MudText>
+    </MudPaper>
+    <MudPaper class="column2 d-flex align-content-end flex-wrap flex-grow-1 gap-4" MaxHeight="100%" MaxWidth="30vw" Elevation="0">
+
+        <MudGrid Justify="Justify.FlexStart">
+        @foreach (var item in movie.Credits.Cast.Take(6))
+        {
+            
+                <MudItem xs="12" sm="6" style="justify-items: center;">
+                    <div style="float: left; auto">
+                            <MudAvatar Class="mr-2 ml-2 mb-2" Image=@("https://image.tmdb.org/t/p/w45/" + item.ProfilePath) />
+                        </div>
+                    <div>
+                        <MudText Typo="Typo.caption">
+                        <span>@item.Name<MudSpacer/>
+                        @item.KnownForDepartment</span>
+                        </MudText> 
+                    </div>
+                </MudItem>
+        }
+        </MudGrid>
     </MudPaper>
 </div>
 
@@ -33,22 +59,6 @@
 
 
 
-
-@* @foreach (var item in movie.Videos.Results)
-    {
-    <h3>@item.Id</h3>
-    <h3>@item.Site</h3>
-    <h3>@item.Name</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.Id" title="YouTube video player"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-    } *@
-
-@* @foreach (var item in movie.Credits.Cast)
-    {
-    <h3>@item.Character</h3>
-    }
-*@
 
 
 @code {
@@ -86,6 +96,21 @@
         margin-top: 30px !important;
     }
 
+    .column2 {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        padding: 0 4px;
+        z-index: 4;
+        background-color: rgba(26, 26, 39, 0.5);
+        margin-top: 0px !important;
+        backdrop-filter: blur(50px);
+    }
+
+.cast-crew{
+    margin-right: 8px;
+}
+
     .MoveDetailnNavBar {
         width: 100vw;
         position: relative;
@@ -105,12 +130,13 @@
         margin-left: 40px;
         margin-top: auto;
         margin-bottom: auto;
+        background-color: rgba(26, 26, 39, 0.2);
         z-index: 1;
     }
 
     .MoveDetailnNavBar .blurcontainer {
-        background: rgba(26, 26, 39, 0.2);
-        backdrop-filter: blur(25px);
+        background: rgba(26, 26, 39, 0.7);
+        backdrop-filter: blur(50px);
         float: right;
         height: 90vh;
         width: 100vw;
@@ -128,5 +154,17 @@
         flex: 1 1 auto;
         padding-top: 0;
         padding: 0 !important;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        z-index: 1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #531b87;
+        border-radius: 8px;
     }
 </style>
