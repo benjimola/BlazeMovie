@@ -8,9 +8,10 @@
     <MudCard class="DetailPoster" style=" width: 300px; height:520px" Elevation="0">
         <MudCardMedia Image=@("https://image.tmdb.org/t/p/w500/" + movie.PosterPath) Height="450" Width="300" />
         <MudCardContent>
-            <MudText Typo="Typo.body2">@MovieName</MudText>
+            <MudText Typo="Typo.caption">@movie.ReleaseDate</MudText>
         </MudCardContent>
     </MudCard>
+
 
 
     <MudPaper class="column pa-16 ma-2" MaxHeight="82vh" MaxWidth="45vw" Elevation="0">
@@ -32,12 +33,33 @@
         <MudText Typo="Typo.h5">Synopsis</MudText>
         <MudText Typo="Typo.caption"><i>@movie.Overview</i></MudText>
     </MudPaper>
-    <MudPaper class="column2 d-flex align-content-end flex-wrap flex-grow-1 gap-4" MaxHeight="100%" MaxWidth="30vw" Elevation="0">
+    <MudPaper class="column2 d-flex align-content-end flex-wrap flex-grow-1 gap-4" 
+    MaxHeight="100%" MaxWidth="30vw" Elevation="0">
+    <MudText Class="ml-2" Typo="Typo.h6">Trailers:</MudText>
+    <MudCarousel  Class="mud-width-full" Style="height:200px;" ShowArrows="true" ShowBullets="false" AutoCycle="false" TData="object">
+ 
+     @foreach (var item in movie.Videos.Results)
+        {
+    <MudCarouselItem Transition="Transition.Fade" Color="@Color.Primary">
+        <div class="d-flex" style="height:100%">
+            <iframe Class="mx-auto my-auto"  src=@("https://www.youtube.com/embed/"+ item.Key) 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture" 
+                allowfullscreen></iframe> 
+                
+        </div>
+    </MudCarouselItem>
+        }
+    </MudCarousel>
+ 
+    <MudText Class="ml-2" Align="Align.Justify" Typo="Typo.h5"> Cast:</MudText>
 
         <MudGrid Justify="Justify.FlexStart">
         @foreach (var item in movie.Credits.Cast.Take(6))
-        {
-            
+        {          
                 <MudItem xs="12" sm="6" style="justify-items: center;">
                     <div style="float: left; auto">
                             <MudAvatar Class="mr-2 ml-2 mb-2" Image=@("https://image.tmdb.org/t/p/w45/" + item.ProfilePath) />
@@ -45,7 +67,7 @@
                     <div>
                         <MudText Typo="Typo.caption">
                         <span>@item.Name<MudSpacer/>
-                        @item.KnownForDepartment</span>
+                        @item.Character</span>
                         </MudText> 
                     </div>
                 </MudItem>

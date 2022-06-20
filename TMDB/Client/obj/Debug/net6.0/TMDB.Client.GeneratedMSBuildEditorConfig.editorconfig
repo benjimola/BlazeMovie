@@ -11,73 +11,73 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = TMDB.Client
 build_property.RootNamespace = TMDB.Client
-build_property.ProjectDir = C:\Users\benja\Documents\GitHub\BlazeMovie\tmdb\Client\
+build_property.ProjectDir = C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\benja\Documents\GitHub\BlazeMovie\tmdb\Client
+build_property.MSBuildProjectDirectory = C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/App.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Components/Carosel.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/Carosel.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJvc2VsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Components/HeroImage.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/HeroImage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIZXJvSW1hZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Components/IndividualMovies.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/IndividualMovies.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJbmRpdmlkdWFsTW92aWVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Components/IndividualTvShows.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/IndividualTvShows.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJbmRpdmlkdWFsVHZTaG93cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Components/MoviesList.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/MoviesList.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb3ZpZXNMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Components/Skeleton.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/Skeleton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTa2VsZXRvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Components/TvShowsList.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/TvShowsList.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUdlNob3dzTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Pages/FetchData.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Pages/MoveDetails.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Pages/MoveDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92ZURldGFpbHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Pages/TvShows.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Pages/TvShows.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHZTaG93cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Shared/NavMenu.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Shared/Toolbar.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Shared/Toolbar.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFRvb2xiYXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/_Imports.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Pages/Index.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-yrxt2dwu3t
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/tmdb/Client/Shared/MainLayout.razor]
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-bv8dakpmhr
