@@ -833,11 +833,6 @@ C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\TMDB.Cli
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\refint\TMDB.Client.dll
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\TMDB.Client.pdb
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\ref\TMDB.Client.dll
-C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Pages\MoveDetails.razor.rz.scp.css
-C:\Users\benja\Documents\GitHub\BlazeMovie\tmdb\Client\obj\Debug\net6.0\build-gz\l6M9fi9X.gz
-C:\Users\benja\Documents\GitHub\BlazeMovie\tmdb\Client\obj\Debug\net6.0\build-gz\T+PrXKuQ.gz
-C:\Users\benja\Documents\GitHub\BlazeMovie\tmdb\Client\obj\Debug\net6.0\build-gz\vGaZ2uFk.gz
-C:\Users\benja\Documents\GitHub\BlazeMovie\tmdb\Client\obj\Debug\net6.0\build-gz\tsFsXJ01.gz
 C:\Users\benja\Documents\BlazeMovie\TMDB\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\benja\Documents\BlazeMovie\TMDB\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\benja\Documents\BlazeMovie\TMDB\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -1683,3 +1678,14 @@ C:\Users\benja\Documents\BlazeMovie\TMDB\Client\obj\Debug\net6.0\TMDB.Client.dll
 C:\Users\benja\Documents\BlazeMovie\TMDB\Client\obj\Debug\net6.0\refint\TMDB.Client.dll
 C:\Users\benja\Documents\BlazeMovie\TMDB\Client\obj\Debug\net6.0\TMDB.Client.pdb
 C:\Users\benja\Documents\BlazeMovie\TMDB\Client\obj\Debug\net6.0\ref\TMDB.Client.dll
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Components\Carosel.razor.rz.scp.css
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Components\IndividualMovies.razor.rz.scp.css
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Components\MoviesList.razor.rz.scp.css
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Components\SideBar-ColumnMD4.razor.rz.scp.css
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Components\TabContent.razor.rz.scp.css
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Components\TrailerComponent.razor.rz.scp.css
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\scopedcss\Components\NewsTab.razor.rz.scp.css
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz\AmCwdwwX.gz
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz\BhMmKTrJ.gz
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz\MTMiTZJv.gz
+C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz\iBYwqW5I.gz
