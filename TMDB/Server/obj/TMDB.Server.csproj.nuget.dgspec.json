@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\server\\TMDB.Server.csproj": {}
+    "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\TMDB.Server.csproj": {}
   },
   "projects": {
     "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\TMDB.Client.csproj": {
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\server\\TMDB.Server.csproj": {
+    "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\TMDB.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\server\\TMDB.Server.csproj",
+        "projectUniqueName": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\TMDB.Server.csproj",
         "projectName": "TMDB.Server",
-        "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\server\\TMDB.Server.csproj",
+        "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\TMDB.Server.csproj",
         "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\server\\obj\\",
+        "outputPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
