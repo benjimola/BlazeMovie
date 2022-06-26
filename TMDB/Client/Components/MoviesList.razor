@@ -1,26 +1,52 @@
 ﻿
-    <MudGrid Class="main-grid" Spacing="2" Justify="Justify.Center">
 
-        @if (Movie.Count == 0)
-        {
-            for (var i = 0; i < 20; i++)
-            {
-                <Skeleton />
-            }
-        }
-        else
-        {
-            @foreach (var items in Movie)
-            {
-                <IndividualMovies Movie="items" />
-            }
-        }
-    </MudGrid>
+
+    <MudGrid class="main-grid" Spacing="2" Justify="Justify.Center">
+        <MudPaper Style="background:transparent" class="movie-items" Outlined="false" Elevation="0">
+	    <div class="container">
+		        <div class="row ipad-width">
+			        <div class="col-md-8">
+                        	
+                                <TabContent title="Movie"  />
+                           
+                            
+                            <TabContent title="TV" />
+                    </div>
+                            <SideBar_ColumnMD4/>
+
+               @*  @if (Movie.Count == 0)
+                {
+                    for (var i = 0; i < 20; i++)
+                    {
+                        <Skeleton />
+                    }
+                }
+                else
+                {
+                  @foreach (var items in Movie)
+                    {
+                        <IndividualMovies Movie="items" />
+                    }
+                }  *@
+            
+        		</div>
+	     
+            </div>
+         
+            </MudPaper>
+        
+        </MudGrid>
+        <CascadingValue Value="Movie">
+                <TrailerComponent />
+        </CascadingValue>
+
+    
 
 
 @code {
     private const string PosterUrl = "https://www.themoviedb.org/t/p/w220_and_h330_face/";
     [Parameter] public List<Movie>? Movie { get; set; }
+  
 }
 
 <style>

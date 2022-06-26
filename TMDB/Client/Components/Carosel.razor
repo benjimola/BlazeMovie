@@ -1,30 +1,56 @@
+@inject HttpClient Http
+
 <MudCarousel Style="height:550px;" ShowArrows="@arrows" ShowBullets="@bullets" AutoCycle="@autocycle" TData="object">
     @foreach (var item in _carousel)
     {
         <MudCarouselItem Transition="Transition.Fade">
             <div class="container1">
                 <div class="caption1">
-                    <MudCard style="background-color:transparent;" Elevation="0">
-                        <MudCardHeader>
-                            <CardHeaderContent>
-                                <MudText Typo="Typo.h3">@item.Title </MudText>
-                            </CardHeaderContent>
-                        </MudCardHeader>
-                        <MudCardContent>
-                            <MudText Typo="Typo.body2">@item.Overview</MudText>
-                        </MudCardContent>
-                        <MudCardActions>
-                            <MudIconButton Variant="Variant.Outlined" Size="Size.Large"
-                            Icon="@Icons.Material.Outlined.PlayArrow" Color="Color.Primary" />
-                        </MudCardActions>
-                    </MudCard>
+                    <div class="container">
+                    <div class="row">
+                        <div class="slider-single-item slick-initialized slick-slider slick-dotted" role="toolbar">
+                            <div class="movie-item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1140px;" tabindex="-1" role="option" aria-describedby="slick-slide80">
+	    			<div class="title-in">
+	    				<div class="cate">
+	    					<span class="yell"><a href="#" tabindex="0">Action</a></span>
+	    					<span class="orange"><a href="#" tabindex="0">advanture</a></span>
+	    				</div>
+	    				<h1><MudText Color="Color.Inherit"><text>@item.Title</text></MudText></h1>
+						<div class="social-btn">
+							<MudLink href="#"  Underline="Underline.None" class="parent-btn" tabindex="0"><MudIconButton Icon="@Icons.Outlined.PlayCircle" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" /> Watch Trailer</MudLink>
+							<MudLink href="#"  Underline="Underline.None" class="parent-btn" tabindex="0"><MudIconButton Icon="@Icons.Outlined.FavoriteBorder" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" /> Add To Favorite</MudLink>
+							<div class="hover-bnt">
+								<MudLink class="parent-btn" tabindex="0" href="#"  Underline="Underline.None"><MudIconButton Icon="@Icons.Outlined.Share" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" />Share</MudLink>
+								<div class="hvr-item">
+									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-facebook"></i></a>
+									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-twitter"></i></a>
+									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-googleplus"></i></a>
+									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-youtube"></i></a>
+								</div>
+							</div>		
+						</div>
+	    				<div class="mv-details">
+	    					<p><span class="rating">7.4 /10 </span><span><MudRating SelectedValue="7" MaxValue="10" /></span> </p>
+	    					<ul class="mv-infor">
+	    						<li>  Run Time: @item.Runtime </li>
+	    						<li>  Rated: PG-13  </li>
+	    						<li>  Release: @item.ReleaseDate</li>
+	    					</ul>
+	    				</div>	
+	    			</div>		
+	    		</div>
                 </div>
-                <div class="red1" />
+                </div>
+                </div>
+            </div>
+                    <div class="red1" />
                 <div class="blue1" />
                 <div class="green1" />
                 <div class="yellow1" />
-                <img class="img1" src="@(imageUrl + item.PosterPath)">
+                <img class="img1" src="@(imageUrl + item.BackdropPath)">
             </div>
+                        
+                    
         </MudCarouselItem>
     }
 </MudCarousel>
@@ -35,7 +61,7 @@
 
     private const string imageUrl = "https://image.tmdb.org/t/p/w1280/";
 
-    List<Movie> _carousel = new List<Movie>();
+   public List<Movie>? _carousel { get; set; } = new List<Movie>();
     private bool arrows = true;
     private bool bullets = false;
     private bool autocycle = true;
@@ -43,82 +69,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
-        var response = await client.GetMovieNowPlayingListAsync(null, 0, null, default);
-
-        foreach (var item in response.Results)
-        {
-            _carousel.Add(new Movie
-            {
-                Title = item.Title,
-                PosterPath = item.BackdropPath,
-                Overview = item.Overview
-
-            });
-        }
+        _carousel = await Http.GetFromJsonAsync<List<Movie>>($"/api/Carousel/");
     }
+
 }
 
-<style>
-    .container1 {
-        height: 550px;
-        width: 100%;
-        position: relative;
-    }
-
-    .caption1 {
-        position: absolute;
-        z-index: 2;
-        width: 400px;
-        height: auto;
-        margin-left:30px;
-    }
-
-    .img1 {
-        height: auto;
-        width: 90vw;
-        position: absolute;
-        right: 0;
-        z-index:-5
-      
-    }
-
-    .red1 {
-        height: inherit;
-        width: 60vw;
-        background-image: linear-gradient(to left, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.7),
-                rgba(26, 26, 39, 0.9), rgba(26, 26, 39, 1));
-        position: absolute;
-        z-index: 0;
-        left: 0;
-    }
-
-    .blue1 {
-        height: 25%;
-        width: inherit;
-        background-image: linear-gradient(to top, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
-                rgba(26, 26, 39, 1));
-        position: absolute;
-        z-index: -4;
-    }
-
-    .green1 {
-        height: inherit;
-        width: 30%;
-        background-image: linear-gradient(to right, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
-                rgba(26, 26, 39, 1));
-        position: absolute;
-        right: 0;
-        z-index: -4;
-    }
-
-    .yellow1 {
-        height: 35%;
-        width: inherit;
-        background-image: linear-gradient(to bottom, rgba(26, 26, 39, 0), rgba(26, 26, 39, 0.6), rgba(26, 26, 39, 0.9),
-                rgba(26, 26, 39, 1));
-        position: absolute;
-        bottom: 0;
-        z-index: -4;
-    }
-</style>

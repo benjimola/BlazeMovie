@@ -1,87 +1,125 @@
 ﻿@page "/Movie/{MovieId:int}/{MovieName}"
 @inject HttpClient Http
-<PageTitle>TMDB - @movie.Title</PageTitle>
+<PageTitle>TMDB - @movie?.Title</PageTitle>
 
+<header id="showcase" class="grid">
+  <div class="bg-image"></div>
+  <div class="content-wrap">
+    <h1>Welcome to Acme Web Solution</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non qui 
+      sint veritatis ad corrupti consequatur aliquam totam! Facilis, 
+      unde corrupti.
+    </p>
+    <a href="#section-a" class="btn">
+      Read More
+    </a>
+  </div>
+</header>
 
-<div class="MoveDetailnNavBar row">
-    <div class="blurcontainer" />
-    <MudCard class="DetailPoster" style=" width: 300px; height:520px" Elevation="0">
-        <MudCardMedia Image=@("https://image.tmdb.org/t/p/w500/" + movie.PosterPath) Height="450" Width="300" />
-        <MudCardContent>
-            <MudText Typo="Typo.caption">@movie.ReleaseDate</MudText>
-        </MudCardContent>
-    </MudCard>
+<main id="main">
+  <!--  Section A  -->
+  <section id="section-a" class="grid">
+    <div class="content-wrap">
+      <h2 class="content-title">Web & Application Development</h2>
+      <div class="content-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum debitis a 
+          modi repellat velit recusandae necessitatibus error corrupti ex incidunt illum 
+          laudantium laboriosam dolorem blanditiis quod dignissimos similique architecto 
+          asperiores, facilis voluptatem temporibus est commodi. Excepturi reprehenderit 
+          perspiciatis aliquam velit. 
+        </p>
+      </div>
+    </div>
+  </section>
+    
+  <!--  Section B  -->
+  <section id="section-b" class="grid">
+    <ul>
+      <li>
+        <div class="card">
+          <img src="https://images.pexels.com/photos/842548/pexels-photo-842548.jpeg?w=1200&h=650&auto=compress&cs=tinysrgb" alt="Section two image">
+            <div class="card-content">
+              <h3 class="card-title">Tech Marketing</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Minus, blanditiis explicabo. Commodi debitis laudantium 
+                temporibus repudiandae dolores, quos fuga optio.
+              </p>
+            </div>
+          </div>
+      </li>
+      <li>
+        <div class="card">
+          <img src="https://images.pexels.com/photos/705869/pexels-photo-705869.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="Section two image">
+            <div class="card-content">
+              <h3 class="card-title">Tech Marketing</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Minus, blanditiis explicabo. Commodi debitis laudantium 
+                temporibus repudiandae dolores, quos fuga optio.
+              </p>
+            </div>
+          </div>
+      </li>
+      <li>
+        <div class="card">
+          <img src="https://images.pexels.com/photos/5362/restaurant-hands-people-coffee.jpg?w=940&h=650&auto=compress&cs=tinysrgb" alt="Section two image">
+            <div class="card-content">
+              <h3 class="card-title">Tech Marketing</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Minus, blanditiis explicabo. Commodi debitis laudantium 
+                temporibus repudiandae dolores, quos fuga optio.
+              </p>
+            </div>
+          </div>
+      </li>
+    </ul>
+  </section>
+  
+  <!--  Section C  -->
+  <section id="section-c" class="grid">
+    <div class="content-wrap">
+      <h2 class="content-title">We handle all your digital needs</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed 
+        rem quis maxime vel accusantium. Necessitatibus eaque aut 
+        cupiditate tempore laudantium!
+      </p>
+    </div>
+  </section>
+  
+  <!--  Section D -->
+  <section id="section-d" class="grid">
+    <div class="box">
+      <h2 class="content-title">Contact Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Laboriosam, quo!
+      </p>
+    </div>
+    <div class="box">
+      <h2 class="content-title">About Our Company</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Laboriosam, quo!
+        Lorem ipsum dolor sit amet, consectetur adipisicing 
+        elit. A culpa recusandae repellendus quas dolores 
+        officia reiciendis similique, magni asperiores. Tempora?
+      </p>
+    </div>
+  </section>
+</main>
 
-
-
-    <MudPaper class="column pa-16 ma-2" MaxHeight="82vh" MaxWidth="45vw" Elevation="0">
-        <MudText Typo="Typo.h4">
-            <b>@movie.Title</b>
-        </MudText>
-        <span>
-            @foreach (var item in movie.Genres)
-            {
-                <MudChip Color="Color.Default" Variant="Variant.Text">@item.Name</MudChip>
-            }
-        </span>
-        <span>Duration: @movie.Runtime <text>Min</text></span>
-        <MudDivider DividerType="DividerType.Middle" Class="my-4" />
-
-        <MudSpacer />
-        
-
-        <MudText Typo="Typo.h5">Synopsis</MudText>
-        <MudText Typo="Typo.caption"><i>@movie.Overview</i></MudText>
-    </MudPaper>
-    <MudPaper class="column2 d-flex align-content-end flex-wrap flex-grow-1 gap-4" 
-    MaxHeight="100%" MaxWidth="30vw" Elevation="0">
-    <MudText Class="ml-2" Typo="Typo.h6">Trailers:</MudText>
-    <MudCarousel  Class="mud-width-full" Style="height:200px;" ShowArrows="true" ShowBullets="false" AutoCycle="false" TData="object">
- 
-     @foreach (var item in movie.Videos.Results)
-        {
-    <MudCarouselItem Transition="Transition.Fade" Color="@Color.Primary">
-        <div class="d-flex" style="height:100%">
-            <iframe Class="mx-auto my-auto"  src=@("https://www.youtube.com/embed/"+ item.Key) 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; 
-                clipboard-write; encrypted-media;
-                gyroscope; picture-in-picture" 
-                allowfullscreen></iframe> 
-                
-        </div>
-    </MudCarouselItem>
-        }
-    </MudCarousel>
- 
-    <MudText Class="ml-2" Align="Align.Justify" Typo="Typo.h5"> Cast:</MudText>
-
-        <MudGrid Justify="Justify.FlexStart">
-        @foreach (var item in movie.Credits.Cast.Take(6))
-        {          
-                <MudItem xs="12" sm="6" style="justify-items: center;">
-                    <div style="float: left; auto">
-                            <MudAvatar Class="mr-2 ml-2 mb-2" Image=@("https://image.tmdb.org/t/p/w45/" + item.ProfilePath) />
-                        </div>
-                    <div>
-                        <MudText Typo="Typo.caption">
-                        <span>@item.Name<MudSpacer/>
-                        @item.Character</span>
-                        </MudText> 
-                    </div>
-                </MudItem>
-        }
-        </MudGrid>
-    </MudPaper>
-</div>
-
-
-
-
-
-
-
+<!-- Footer -->
+<footer id="main-footer" class="grid">
+  <div>Acme Web Solutions</div>
+  <div>
+    Project By <a href="#" target="_blank">Jeison Perez</a> 
+  </div>
+</footer>
 
 @code {
     [Parameter] public int? MovieId { get; set; }
@@ -96,97 +134,9 @@
 
 }
 
-
 <style>
-    .row {
-        display: -ms-flexbox;
-        /* IE10 */
-        display: flex;
-        -ms-flex-wrap: wrap;
-        /* IE10 */
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
-
-    .column {
-        -ms-flex: 25%;
-        /* IE10 */
-        flex: 25%;
-        padding: 0 4px;
-        z-index: 1;
-        background-color: transparent;
-        margin-top: 30px !important;
-    }
-
-    .column2 {
-        -ms-flex: 25%;
-        /* IE10 */
-        flex: 25%;
-        padding: 0 4px;
-        z-index: 4;
-        background-color: rgba(26, 26, 39, 0.5);
-        margin-top: 0px !important;
-        backdrop-filter: blur(50px);
-    }
-
-.cast-crew{
-    margin-right: 8px;
-}
-
-    .MoveDetailnNavBar {
-        width: 100vw;
-        position: relative;
-        left: calc(-53vw + 53%);
-        height: 90vh;
-        padding: 0px;
+    .bg {
         background-image: url(https://www.themoviedb.org/t/p/w1280/@movie.BackdropPath);
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-    }
-
-    .MoveDetailnNavBar .DetailPoster {
-        justify-content: center;
-        align-items: center;
-        margin-left: 40px;
-        margin-top: auto;
-        margin-bottom: auto;
-        background-color: rgba(26, 26, 39, 0.2);
-        z-index: 1;
-    }
-
-    .MoveDetailnNavBar .blurcontainer {
-        background: rgba(26, 26, 39, 0.7);
-        backdrop-filter: blur(50px);
-        float: right;
-        height: 90vh;
-        width: 100vw;
-        position: absolute;
-        right: 0;
-    }
-
-
-    .mud-main-content {
-        /* padding-top: var(--mud-appbar-height); */
-    }
-
-    .mud-main-content {
-        margin: 0;
-        flex: 1 1 auto;
-        padding-top: 0;
-        padding: 0 !important;
-    }
-
-
-    ::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-        z-index: 1;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #531b87;
-        border-radius: 8px;
+        height: 85vh;
     }
 </style>

@@ -3,32 +3,44 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
-<PageTitle>BBM - Movies</PageTitle>
-<Carosel />
-<MoviesList Movie="movies" />
+<PageTitle>TMDB - Movies</PageTitle>
+    <MudMainContent>
+        <MudContainer Class="gap-0 pd-0 relative">
+    <Carosel />
+   
+         <MoviesList Movie="movies"/>
+   
+       
+ 
+
+
 <MudSpacer />
 
-<div class="pagination-container">
+@*<div class="pagination-container">
 
     <MudPagination Selected="Page" SelectedChanged="pageChanged" class="pa-4" Color="Color.Tertiary"
         Variant="Variant.Outlined" Count="TotalPage" />
-</div>
-
-
+</div>*@
+</MudContainer>
+    </MudMainContent>
+        
 
 
 @code {
-    
+
     [Parameter]
     public int Page { get; set; } = 1;
-    
+
     [Parameter] 
     public int TotalPage { get; set; } = 500;
     public List<Movie>? movies { get; set; } = new List<Movie>();
+    
+   
     private void pageChanged(int i)
     {
         Page = i;
         NavigationManager.NavigateTo($"/index/{Page}");
+        
     }
     protected override void OnInitialized()
     {
@@ -37,7 +49,7 @@
             Page = 1;
             NavigationManager.NavigateTo($"/index/{Page}");
         }
-        
+
 
         GetMovies(Page);
     }
@@ -52,6 +64,7 @@
         movies.Clear();
         movies = await Http.GetFromJsonAsync<List<Movie>>($"/api/Movie/GetMovies/{Page}");
     }
+
 }
 
 <style>   

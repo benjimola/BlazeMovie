@@ -30,4 +30,8 @@
 	  <_ContentIncludedByDefault Remove="Components\TvShowList.razor" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Components\MovieViews\Components\" />
+	</ItemGroup>
+
 </Project>

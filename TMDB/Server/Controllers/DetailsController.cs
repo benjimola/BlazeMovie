@@ -12,12 +12,23 @@ namespace TMDB.Server.Controllers
     {
         // GET: api/<DetailsController>
         [HttpGet("{id}")]
-        public ActionResult<Movie> Get(int id)
+        public async Task <ActionResult<Movie>> Get(int id)
         {
             Movie movie = new Movie();
             TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
-            movie = client.GetMovieAsync(id, MovieMethods.Credits | MovieMethods.Videos | MovieMethods.WatchProviders | MovieMethods.Similar).Result;
+            movie = await client.GetMovieAsync(id, MovieMethods.Credits | MovieMethods.Videos | MovieMethods.WatchProviders | MovieMethods.Similar | MovieMethods.ReleaseDates);
             return Ok(movie);
+        }
+
+        [Route("GetTrailer/{id:int}")]
+        [HttpGet]
+        public async Task<ActionResult<Movie>> GetTrailer(int id)
+        {
+            
+            TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
+            var response = await client.GetMovieAsync(id, MovieMethods.Videos);
+            
+            return Ok(response);
         }
 
     }
