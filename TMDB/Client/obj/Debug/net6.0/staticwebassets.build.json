@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8Q2OVPwTv7fK0RZtthdFMBw797XQBckw+gJ5uMA78Rg=",
+  "Hash": "+j25SsHlIf8yEkaHZlB56d0CnExJKOnRygL0ke+Sze4=",
   "Source": "TMDB.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7327,6 +7327,23 @@
       "OriginalItemSpec": "wwwroot\\images\\logo2.png"
     },
     {
+      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\wwwroot\\images\\New-banner.gif",
+      "SourceId": "TMDB.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/New-banner.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\New-banner.gif"
+    },
+    {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\wwwroot\\images\\nivo\\close.png",
       "SourceId": "TMDB.Client",
       "SourceType": "Discovered",
@@ -7461,6 +7478,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\nivo\\prev@2x.png"
+    },
+    {
+      "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\wwwroot\\images\\Sockpuppet_ad.gif",
+      "SourceId": "TMDB.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/Sockpuppet_ad.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Sockpuppet_ad.gif"
     },
     {
       "Identity": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\wwwroot\\images\\uploads\\ads1.png",
