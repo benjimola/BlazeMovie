@@ -94,9 +94,13 @@ build_metadata.AdditionalFiles.CssScope = b-32fhkgmpum
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaWRlQmFyLUNvbHVtbk1ENC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-e6sje6qfaj
 
-[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/TabContent.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWJDb250ZW50LnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-bfd63yvt4q
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/TabContentMovie.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWJDb250ZW50TW92aWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8dz30ys47z
+
+[C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/TabContentTvShow.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWJDb250ZW50VHZTaG93LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-c9warx3609
 
 [C:/Users/benja/Documents/GitHub/BlazeMovie/TMDB/Client/Components/TrailerComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmFpbGVyQ29tcG9uZW50LnJhem9y

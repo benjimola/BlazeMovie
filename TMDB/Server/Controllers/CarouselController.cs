@@ -12,11 +12,11 @@ namespace TMDB.Server.Controllers
     {
         // GET: api/<CarouselController>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Movie>>> Get()
+        public IActionResult Get()
         {
 
             TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
-            var response = await client.GetMovieNowPlayingListAsync(null, 0, null, default);
+            var response = client.GetMovieNowPlayingListAsync(null, 0, null, default).Result;
             return Ok(response.Results);
         }
 

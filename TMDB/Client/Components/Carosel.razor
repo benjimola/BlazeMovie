@@ -1,59 +1,64 @@
 @inject HttpClient Http
 
 <MudCarousel Style="height:550px;" ShowArrows="@arrows" ShowBullets="@bullets" AutoCycle="@autocycle" TData="object">
-    @foreach (var item in _carousel)
+    
+    @if (_carousel != null)
     {
-        <MudCarouselItem Transition="Transition.Fade">
-            <div class="container1">
-                <div class="caption1">
-                    <div class="container">
-                    <div class="row">
-                        <div class="slider-single-item slick-initialized slick-slider slick-dotted" role="toolbar">
-                            <div class="movie-item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1140px;" tabindex="-1" role="option" aria-describedby="slick-slide80">
-	    			<div class="title-in">
-	    				<div class="cate">
-	    					<span class="yell"><a href="#" tabindex="0">Action</a></span>
-	    					<span class="orange"><a href="#" tabindex="0">advanture</a></span>
-	    				</div>
-	    				<h1><MudText Color="Color.Inherit"><text>@item.Title</text></MudText></h1>
-						<div class="social-btn">
-							<MudLink href="#"  Underline="Underline.None" class="parent-btn" tabindex="0"><MudIconButton Icon="@Icons.Outlined.PlayCircle" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" /> Watch Trailer</MudLink>
-							<MudLink href="#"  Underline="Underline.None" class="parent-btn" tabindex="0"><MudIconButton Icon="@Icons.Outlined.FavoriteBorder" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" /> Add To Favorite</MudLink>
-							<div class="hover-bnt">
-								<MudLink class="parent-btn" tabindex="0" href="#"  Underline="Underline.None"><MudIconButton Icon="@Icons.Outlined.Share" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" />Share</MudLink>
-								<div class="hvr-item">
-									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-facebook"></i></a>
-									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-twitter"></i></a>
-									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-googleplus"></i></a>
-									<a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-youtube"></i></a>
-								</div>
-							</div>		
-						</div>
-	    				<div class="mv-details">
-	    					<p><span class="rating">7.4 /10 </span><span><MudRating SelectedValue="7" MaxValue="10" /></span> </p>
-	    					<ul class="mv-infor">
-	    						<li>  Run Time: @item.Runtime </li>
-	    						<li>  Rated: PG-13  </li>
-	    						<li>  Release: @item.ReleaseDate</li>
-	    					</ul>
-	    				</div>	
-	    			</div>		
-	    		</div>
-                </div>
-                </div>
-                </div>
-            </div>
+        @foreach (var item in _carousel)
+        {
+            <MudCarouselItem Transition="Transition.Fade">
+                <div class="container1">
+                    <div class="caption1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="slider-single-item slick-initialized slick-slider slick-dotted" role="toolbar">
+                                    <div class="movie-item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1140px;" tabindex="-1" role="option" aria-describedby="slick-slide80">
+                                        <div class="title-in">
+                                            <div class="cate">
+                                                <span class="yell"><a href="#" tabindex="0">Action</a></span>
+                                                <span class="orange"><a href="#" tabindex="0">advanture</a></span>
+                                            </div>
+                                            <h1><MudText Color="Color.Inherit"><text>@item.Title</text></MudText></h1>
+                                            <div class="social-btn">
+                                                <MudLink href="#"  Underline="Underline.None" class="parent-btn" tabindex="0"><MudIconButton Icon="@Icons.Outlined.PlayCircle" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" /> Watch Trailer</MudLink>
+                                                <MudLink href="#"  Underline="Underline.None" class="parent-btn" tabindex="0"><MudIconButton Icon="@Icons.Outlined.FavoriteBorder" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" /> Add To Favorite</MudLink>
+                                                <div class="hover-bnt">
+                                                    <MudLink class="parent-btn" tabindex="0" href="#"  Underline="Underline.None"><MudIconButton Icon="@Icons.Outlined.Share" Variant="Variant.Text" Color="Color.Tertiary" Size="Size.Large" />Share</MudLink>
+                                                    <div class="hvr-item">
+                                                        <a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-facebook"></i></a>
+                                                        <a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-twitter"></i></a>
+                                                        <a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-googleplus"></i></a>
+                                                        <a href="#" class="hvr-grow" tabindex="0"><i class="ion-social-youtube"></i></a>
+                                                    </div>
+                                                </div>		
+                                            </div>
+                                            <div class="mv-details">
+                                                <p><span class="rating">7.4 /10 </span><span><MudRating SelectedValue="7" MaxValue="10" /></span> </p>
+                                                <ul class="mv-infor">
+                                                    <li>  Run Time: @item.Runtime </li>
+                                                    <li>  Rated: PG-13  </li>
+                                                    <li>  Release: @item.ReleaseDate</li>
+                                                </ul>
+                                            </div>	
+                                        </div>		
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="red1" />
-                <div class="blue1" />
-                <div class="green1" />
-                <div class="yellow1" />
-                <img class="img1" src="@(imageUrl + item.BackdropPath)">
-            </div>
-                        
-                    
-        </MudCarouselItem>
+                    <div class="blue1" />
+                    <div class="green1" />
+                    <div class="yellow1" />
+                    <img class="img1" src="@(imageUrl + item.BackdropPath)">
+                </div>
+
+
+            </MudCarouselItem>
+        }
+
     }
-</MudCarousel>
+    </MudCarousel>
 
 
 
@@ -61,7 +66,7 @@
 
     private const string imageUrl = "https://image.tmdb.org/t/p/w1280/";
 
-   public List<Movie>? _carousel { get; set; } = new List<Movie>();
+   public IEnumerable<Movie>? _carousel { get; set; }
     private bool arrows = true;
     private bool bullets = false;
     private bool autocycle = true;
@@ -69,7 +74,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _carousel = await Http.GetFromJsonAsync<List<Movie>>($"/api/Carousel/");
+        _carousel = await Http.GetFromJsonAsync<Movie[]>($"/api/Carousel/");
     }
 
 }

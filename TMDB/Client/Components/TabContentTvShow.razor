@@ -1,0 +1,234 @@
+﻿@using TMDB.Client.Services
+
+@inject ITvRepository _repository;
+
+<div class="title-hd">
+    <h2>@title</h2>
+		<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+				            </div>
+    <MudTabs Class="mud-tabs-rounded mtab" Color="Color.Tertiary"  Elevation="0" Rounded="true"  PanelClass="pa-6">
+        <MudTabPanel Text="#Airing Today" ToolTip="Airing on various Networks ">
+ 		    <div class="media-scroller snaps-inline">
+			    @if (AiringToday != null){      
+                    @foreach (var item in AiringToday){
+                        <div class="media-element mr-4">
+                           <MudImage 
+                                Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
+                                Width="200" Height="320" 
+                               Alt="@item.Name" 
+                               Elevation="0" 
+                               Class="rounded-lg"/>                           
+			            </div>               
+			       }
+	            }
+
+       
+            </div>
+        </MudTabPanel>
+        <MudTabPanel Text="#On The Air" ToolTip="Showing Right Now">
+               <div class="media-scroller snaps-inline">
+            @if (OnTheAir != null)
+            {
+                @foreach (var item in OnTheAir)
+                {
+                    <div class="media-element mr-4">
+                        <MudImage 
+                               Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
+                                Width="200" Height="320" 
+                               Alt="Swedish Farm House" 
+                               Elevation="0" 
+                               Class="rounded-lg"/>
+                    </div>
+
+                }
+            }
+
+       
+            </div>
+        </MudTabPanel>
+        <MudTabPanel Text="#Popular" ToolTip="Trending">
+                <div class="media-scroller snaps-inline">
+            @if (Popular != null)
+            {
+                @foreach (var item in Popular)
+                {
+                    <div class="media-element mr-4">
+                        <MudImage 
+                           Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
+                            Width="200" Height="320" 
+                           Alt="Swedish Farm House" 
+                           Elevation="0" 
+                           Class="rounded-lg"/>
+                    </div>
+
+                }
+            }
+
+       
+            </div>
+        </MudTabPanel>
+	    <MudTabPanel Text="#Top Rated" ToolTip="Movies Based on User rating">
+                <div class="media-scroller snaps-inline">
+            @if (TopRated != null)
+            {
+                @foreach (var item in TopRated)
+                {
+                    <div class="media-element mr-4">
+                        <MudImage 
+                           Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
+                            Width="200" Height="320" 
+                           Alt="Swedish Farm House" 
+                           Elevation="0" 
+                           Class="rounded-sm"/>
+                    </div>
+                }
+            }       
+            </div>
+        </MudTabPanel>
+    </MudTabs>
+
+
+@code {
+    [Parameter]public string? title{ get; set; }
+
+    public IEnumerable<TvShow>? Popular{ get; set; }
+    public IEnumerable<TvShow>? AiringToday{ get; set; }
+    public IEnumerable<TvShow>? TopRated { get; set; } 
+    public IEnumerable<TvShow>? OnTheAir { get; set; } 
+
+    protected override async Task OnInitializedAsync()
+    {
+        Popular = await _repository.GetPopular(); 
+        AiringToday = await _repository.GetAiringToday();
+        TopRated = await _repository.GetTopRated();
+        OnTheAir = await _repository.GetOnTheAir();
+    }
+
+    @*         private async void GetUpcoming(){
+          
+        }
+    
+    private async void GetNowPlaying(){
+            
+        }
+
+private async void GetTopRated(){
+     
+
+        }
+
+        private async void GetPopular(){
+          
+        } *@
+
+}
+
+<style>
+
+.mud-tabs-toolbar .mud-tabs-toolbar-inner {
+
+    background-color: transparent;
+}
+
+.mud-tabs-toolbar.mud-tabs-rounded {
+
+    background-color: transparent;
+}
+
+
+	.media-scroller {
+  --_spacer: var(--size-3);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 30%;
+
+  padding: 0 var(--_spacer) var(--_spacer);
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+ 
+}
+
+.media-element>img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline>* {
+  scroll-snap-align: start;
+}
+
+.media-scroller--with-groups {
+  grid-auto-columns: 80%;
+}
+
+.media-group {
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+}
+
+.container {
+  inline-size: min(100% - 4rem, 70rem);
+  margin-inline: auto;
+}
+
+.flow {
+  display: grid;
+  gap: var(--size-3);
+}
+
+.page-header {
+  padding-block: var(--size-9);
+  margin-block-end: var(--size-9);
+  background: var(--gradient-16);
+  color: var(--gray-0);
+  box-shadow: var(--shadow-2);
+}
+
+.page-title {
+  font-size: var(--font-size-fluid-3);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-fluid-1);
+}
+
+.section-title {
+  padding-inline-start: var(--size-6);
+  margin-block: var(--size-9) var(--size-3);
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    z-index: 1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #36428147;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+</style>	
