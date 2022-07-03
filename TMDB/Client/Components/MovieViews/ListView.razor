@@ -1,0 +1,204 @@
+﻿
+@using TMDB.Client.Services
+@inject NavigationManager NavigationManager
+
+@inject IMovieRepository _repository
+
+<div class="container">
+    <div class="row ipad-width2">
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="topbar-filter">
+					<p>Found <span>1,608 movies</span> in total</p>
+					<label>Sort by:</label>
+					<select>
+						<option value="popularity">Popularity Descending</option>
+						<option value="popularity">Popularity Ascending</option>
+						<option value="rating">Rating Descending</option>
+						<option value="rating">Rating Ascending</option>
+						<option value="date">Release date Descending</option>
+						<option value="date">Release date Ascending</option>
+					</select>
+					<MudLink Href="#" @onclick="@(()=> SetViewType.InvokeAsync("listview"))" class="list"><MudIcon Icon="@Icons.Outlined.FormatListBulleted" Style="margin-right:5px; margin-top:5px" Size="Size.Small" Title="ListView"/></MudLink>
+					<MudLink Href="#" @onclick="@(()=> SetViewType.InvokeAsync("gridview"))" class="grid"><MudIcon Icon="@Icons.Outlined.GridView" Style="margin-right:5px; margin-top:5px" Size="Size.Small" Title="GridView"/></MudLink>
+					
+				</div>
+				@if (Latest != null)
+				{
+					@foreach (var item in Latest)
+					{
+						<Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(0.3)" Delay="TimeSpan.FromSeconds(0.3)">
+								<div class="movie-item-style-2" id="list">
+									<img  Width="170" Height="261" Src="@("https://www.themoviedb.org/t/p/w342/"+ @item.PosterPath)" alt="@item.Title">
+									<div class="mv-item-infor" id="listview">
+										<h6><a href="moviesingle.html">@item.Title <span>(@item.ReleaseDate.Value.Year)</span></a></h6>
+										<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+										<p class="describe">@item.Overview</p>
+										<p class="run-time"> Run Time: @item.Runtime.Value    .     <span>MMPA: PG-13 </span>    .     <span>Release: @item.ReleaseDate.Value.Date.ToString("MM/dd/yyyy")</span></p>
+										<p>Director: <a href="#">Joss Whedon</a></p>
+										<p>Stars: <a href="#">Robert Downey Jr.,</a> <a href="#">Chris Evans,</a> <a href="#">  Chris Hemsworth</a></p>
+									</div>
+								</div>
+						</Animate>
+					}
+				}
+			
+
+				<div class="topbar-filter">
+					<label>Movies per page:</label>
+					<select>
+						<option value="range">5 Movies</option>
+						<option value="saab">10 Movies</option>
+					</select>
+					<MudPagination Selected="Page" 
+							SelectedChanged="pageChanged" Size="Size.Small" Color="Color.Tertiary"
+							Variant="Variant.Outlined" Count="TotalPage"/>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="sidebar">
+					<div class="searh-form">
+						<h4 class="sb-title">Search for movie</h4>
+						<form class="form-style-1" action="#">
+							<div class="row">
+								<div class="col-md-12 form-it">
+									<label>Movie name</label>
+									<input type="text" placeholder="Enter keywords">
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Genres &amp; Subgenres</label>
+									<div class="group-ip">
+										<div class="ui fluid dropdown selection multiple" tabindex="0"><select name="skills" multiple="">
+											<option value="">Enter to filter genres</option>
+											<option value="Action1">Action 1</option>
+					                        <option value="Action2">Action 2</option>
+					                        <option value="Action3">Action 3</option>
+					                        <option value="Action4">Action 4</option>
+					                        <option value="Action5">Action 5</option>
+										</select><i class="dropdown icon"></i><div class="default text">Enter to filter genres</div><div class="menu" tabindex="-1"><div class="item" data-value="Action1">Action 1</div><div class="item" data-value="Action2">Action 2</div><div class="item" data-value="Action3">Action 3</div><div class="item" data-value="Action4">Action 4</div><div class="item" data-value="Action5">Action 5</div></div></div>
+									</div>
+									
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Rating Range</label>
+									
+									 <select>
+										<option value="range">-- Select the rating range below --</option>
+										<option value="saab">-- Select the rating range below --</option>
+										<option value="saab">-- Select the rating range below --</option>
+										<option value="saab">-- Select the rating range below --</option>
+									</select>
+									
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Release Year</label>
+									<div class="row">
+										<div class="col-md-6">
+											<select>
+												<option value="range">From</option>
+												<option value="number">10</option>
+												<option value="number">20</option>
+												<option value="number">30</option>
+											</select>
+										</div>
+										<div class="col-md-6">
+											<select>
+												<option value="range">To</option>
+												<option value="number">20</option>
+												<option value="number">30</option>
+												<option value="number">40</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 ">
+									<input class="submit" type="submit" value="submit">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="ads">
+						<img src="images/uploads/ads1.png" alt="">
+					</div>
+					<div class="sb-facebook sb-it">
+						<h4 class="sb-title">Find us on Facebook</h4>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftemplatespoint.net%2F%3Ffref%3Dts&amp;tabs=timeline&amp;width=340&amp;height=315px&amp;small_header=true&amp;adapt_container_width=false&amp;hide_cover=false&amp;show_facepile=true&amp;appId" data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftemplatespoint.net%2F%3Ffref%3Dts&amp;tabs=timeline&amp;width=340&amp;height=315px&amp;small_header=true&amp;adapt_container_width=false&amp;hide_cover=false&amp;show_facepile=true&amp;appId" height="315" style="width:100%;border:none;overflow:hidden"></iframe>
+					</div>
+					<div class="sb-twitter sb-it">
+						<h4 class="sb-title">Tweet to us</h4>
+						<div class="slick-tw slick-initialized slick-slider slick-dotted" role="toolbar">
+							<div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1200px; transform: translate3d(-300px, 0px, 0px);" role="listbox"><div class="tweet item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 300px;"><!-- Put your 2nd twiter account id here -->
+							</div><div class="tweet item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 300px;"><!-- Put your twiter id here -->
+							</div><div class="tweet item slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 300px;"><!-- Put your 2nd twiter account id here -->
+							</div><div class="tweet item slick-slide slick-cloned" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 300px;"><!-- Put your twiter id here -->
+							</div></div></div>
+							
+						<ul class="slick-dots" style="" role="tablist"><li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01"><button type="button" data-role="none" role="button" tabindex="0">2</button></li></ul></div>							
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+						
+@code{
+	private int _selected = 1;
+	IList<Movie>? Latest { get; set; } = new List<Movie>();
+	
+	[Parameter] public int Page { get; set; } = 1;
+
+	[Parameter] public int TotalPage { get; set; } = 500;
+
+	[Parameter] public EventCallback<string> SetViewType { get; set; } 
+
+	System.Uri uri;
+
+	private void pageChanged(int i)
+	{
+		Page = i;
+		NavigationManager.NavigateTo($"/index/{Page}");
+		GetMovies(Page);
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+
+
+		if (Page < 1 )
+		{
+			Page = 1;
+			//NavigationManager.NavigateTo($"/index/{Page}");
+		}
+		uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+		Console.WriteLine(uri);
+
+		GetMovies(Page);
+	}
+
+	protected override async Task OnParametersSetAsync()
+	{
+		uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+		Console.WriteLine(uri);
+
+		if (Latest != null)
+		{
+			try{	
+				Latest.Clear();
+			}
+			catch (Exception e)
+			{
+				
+			}
+
+		}
+		
+		Latest = await _repository.GetPopular(Page);
+		
+    }
+
+	private async void GetMovies(int page)
+    {
+		
+        Latest = await _repository.GetPopular(Page);
+		
+    }
+}

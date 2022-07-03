@@ -1,4 +1,4 @@
-/* ---------------- TABLE OF CONTENT ----------------------
+﻿/* ---------------- TABLE OF CONTENT ----------------------
 	-----------------------------------------------------------
 	-----------------------------------------------------------
 
@@ -5088,7 +5088,7 @@ ul {
     .movie-item-style-2 .mv-item-infor h6 a {
         font-family: 'Dosis', sans-serif;
         font-size: 14px;
-        color: #ffffff;
+        color: #b2b0bf !important;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -5133,7 +5133,7 @@ ul {
     }
 
         .movie-item-style-2 .mv-item-infor p a:hover {
-            color: #dcf836;
+            color: #5249a0;
         }
 
 .movie-item-style-2:hover h6 a {
@@ -9833,19 +9833,4 @@ footer.full-width-ft .ft-copyright {
         color: #8c9296;
         font-family: 'Dosis', sans-serif;
         font-weight: 700;
-    }
-
-    ::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-        z-index: 1;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background: #36428147;
-        border-radius: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        background: transparent;
     }

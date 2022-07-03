@@ -2,6 +2,26 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "BlazorAnimate/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0",
+          "MinVer": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/BlazorAnimate.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BlazorAnimate.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorAnimate.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorAnimate.props": {}
+        }
+      },
       "Blazored.LocalStorage/4.3.0-preview.1": {
         "type": "package",
         "dependencies": {
@@ -336,6 +356,15 @@
           "lib/net6.0/Microsoft.JSInterop.WebAssembly.dll": {}
         }
       },
+      "MinVer/2.0.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/_._": {}
+        }
+      },
       "MudBlazor/6.0.9": {
         "type": "package",
         "dependencies": {
@@ -456,6 +485,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "BlazorAnimate": "3.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.4",
           "MudBlazor": "6.0.9",
           "Newtonsoft.Json": "13.0.2-beta1",
@@ -487,6 +517,24 @@
     }
   },
   "libraries": {
+    "BlazorAnimate/3.0.0": {
+      "sha512": "IUX/IFdEKiQ5ncZ5/iVhaZynWL2dA04lH9ieza9JhBj/jJH8f2NwM6OqdJFm7RfkFdbkIH8t2Bxd/laZS2EXWQ==",
+      "type": "package",
+      "path": "blazoranimate/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazoranimate.3.0.0.nupkg.sha512",
+        "blazoranimate.nuspec",
+        "build/BlazorAnimate.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorAnimate.props",
+        "buildTransitive/BlazorAnimate.props",
+        "lib/netstandard2.0/BlazorAnimate.dll",
+        "staticwebassets/aos.css",
+        "staticwebassets/blazorAnimateInterop.js"
+      ]
+    },
     "Blazored.LocalStorage/4.3.0-preview.1": {
       "sha512": "QEmh/JjnrmA1ZDoRBNMCW+OOkIlGutzJzKLRFzJq9OC4JiLN2vMV1KgiukAp1Ti6BZz1cHz7eMehKTaBipOxPw==",
       "type": "package",
@@ -1005,6 +1053,27 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "MinVer/2.0.0": {
+      "sha512": "1U1JIwD47a/m9S1LXdDm+fByP3LYR9hTeFfi1MlizScXF4e4yUpZvunEyQAovVfi4qYaUlVzIbk08OXFfz3FfQ==",
+      "type": "package",
+      "path": "minver/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MinVer.targets",
+        "buildMultiTargeting/MinVer.targets",
+        "minver.2.0.0.nupkg.sha512",
+        "minver.nuspec",
+        "minver.png",
+        "minver/McMaster.Extensions.CommandLineUtils.dll",
+        "minver/MinVer.Lib.dll",
+        "minver/MinVer.Lib.pdb",
+        "minver/MinVer.deps.json",
+        "minver/MinVer.dll",
+        "minver/MinVer.pdb",
+        "minver/MinVer.runtimeconfig.json"
+      ]
+    },
     "MudBlazor/6.0.9": {
       "sha512": "PDBCp76JjU6JPTECPrVh4eHySgBuuTiDN9sd0YFlhIRuKs4X5/5nePqPIm5pfZiCHscRHeTfSRLs2Kjv40u6uw==",
       "type": "package",
@@ -1258,11 +1327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\TMDB.Server.csproj",
+      "projectUniqueName": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Server\\TMDB.Server.csproj",
       "projectName": "TMDB.Server",
-      "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\TMDB.Server.csproj",
+      "projectPath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Server\\TMDB.Server.csproj",
       "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Server\\obj\\",
+      "outputPath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1279,11 +1348,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\TMDB.Client.csproj": {
-              "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Client\\TMDB.Client.csproj"
+            "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Client\\TMDB.Client.csproj": {
+              "projectPath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Client\\TMDB.Client.csproj"
             },
-            "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj": {
-              "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj"
+            "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Shared\\TMDB.Shared.csproj": {
+              "projectPath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Shared\\TMDB.Shared.csproj"
             }
           }
         }

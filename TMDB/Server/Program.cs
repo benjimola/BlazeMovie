@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.ResponseCompression;
-
+using TMDB.Client.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-//builder.Services.AddScoped<IMovieServices, MovieServices>();
+//builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 
 var app = builder.Build();
 

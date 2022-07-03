@@ -4,21 +4,23 @@
 
 <div class="title-hd">
     <h2>@title</h2>
-		<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+		<MudButton Variant="Variant.Text" OnClick="@(()=> SetViewType.InvokeAsync("gridview"))" class="viewall">View all <i class="ion-ios-arrow-right"></i></MudButton>
 				            </div>
     <MudTabs Class="mud-tabs-rounded mtab" Color="Color.Tertiary"  Elevation="0" Rounded="true"  PanelClass="pa-6">
         <MudTabPanel Text="#Popular" ToolTip="Popular Movies ">
  		    <div class="media-scroller snaps-inline">
 			    @if (Popular != null){      
                     @foreach (var item in Popular){
-                        <div class="media-element mr-4">
-                           <MudImage 
-                                Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
-                                Width="200" Height="320" 
-                               Alt="@item.Title" 
-                               Elevation="0" 
-                               Class="rounded-lg"/>                           
-			            </div>               
+                        <div class="movie-item-style-2 movie-item-style-1">
+							<img src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)" alt="">
+							<div class="hvr-inner">
+	            				<a  href="#"> More <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@item.Title</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+							</div>
+						</div>		       
 			       }
 	            }
 
@@ -31,14 +33,16 @@
             {
                 @foreach (var item in NowPlaying)
                 {
-                    <div class="media-element mr-4">
-                        <MudImage 
-                               Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
-                                Width="200" Height="320" 
-                               Alt="Swedish Farm House" 
-                               Elevation="0" 
-                               Class="rounded-lg"/>
-                    </div>
+                   <div class="movie-item-style-2 movie-item-style-1">
+							<img src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)" alt="">
+							<div class="hvr-inner">
+	            				<a  href="#"> More <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@item.Title</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+							</div>
+						</div>		     
 
                 }
             }
@@ -52,15 +56,16 @@
             {
                 @foreach (var item in upcoming)
                 {
-                    <div class="media-element mr-4">
-                        <MudImage 
-                           Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
-                            Width="200" Height="320" 
-                           Alt="Swedish Farm House" 
-                           Elevation="0" 
-                           Class="rounded-lg"/>
-                    </div>
-
+                    <div class="movie-item-style-2 movie-item-style-1">
+							<img src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)" alt="">
+							<div class="hvr-inner">
+	            				<a  href="#"> More <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@item.Title</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+							</div>
+						</div>		     
                 }
             }
 
@@ -73,14 +78,16 @@
             {
                 @foreach (var item in TopRated)
                 {
-                    <div class="media-element mr-4">
-                        <MudImage 
-                           Src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)"
-                            Width="200" Height="320" 
-                           Alt="Swedish Farm House" 
-                           Elevation="0" 
-                           Class="rounded-sm"/>
-                    </div>
+                    <div class="movie-item-style-2 movie-item-style-1">
+							<img src="@("https://www.themoviedb.org/t/p/w500/"+ @item.PosterPath)" alt="">
+							<div class="hvr-inner">
+	            				<a  href="#"> More <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@item.Title</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+							</div>
+						</div>		     
                 }
             }       
             </div>
@@ -90,11 +97,11 @@
 
 @code {
     [Parameter]public string? title{ get; set; }
-
-    public IEnumerable<Movie>? upcoming{ get; set; }
-    public IEnumerable<Movie>? NowPlaying{ get; set; }
-    public IEnumerable<Movie>? TopRated { get; set; } 
-    public IEnumerable<Movie>? Popular { get; set; } 
+    [Parameter] public EventCallback<string> SetViewType { get; set; } 
+    public IList<Movie>? upcoming{ get; set; } = new List<Movie>();
+    public IList<Movie>? NowPlaying{ get; set; } = new List<Movie>();
+    public IList<Movie>? TopRated { get; set; } = new List<Movie>();
+    public IList<Movie>? Popular { get; set; } = new List<Movie>();
 
     protected override async Task OnInitializedAsync()
     {

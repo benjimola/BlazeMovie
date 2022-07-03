@@ -1,21 +1,48 @@
-﻿
+﻿@using TMDB.Client.Components.MovieViews
+
 
 
     <MudGrid class="main-grid" Spacing="2" Justify="Justify.Center">
         <MudPaper Style="background:transparent" class="movie-items" Outlined="false" Elevation="0">
-	    <div class="container">
-		        <div class="row ipad-width">
-			        <div class="col-md-8">
-                        	
-                                <TabContentMovie/>
-                           
-                            
-                            <TabContentTvShow />
-                    </div>
-                            <SideBar_ColumnMD4/>
-                           
 
-               @*  @if (Movie.Count == 0)
+            <div class="container">
+       
+                <div class="row ipad-width">
+                     
+                   @if (setMovieType == "dashboard"){
+                        
+                      <Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(1)" Delay="TimeSpan.FromSeconds(1)">
+                               <div class="col-md-8">
+
+                                    <TabContentMovie title="MOVIES" SetViewType="SetViewType"/>
+                                    <TabContentTvShow title="TvSHOWS" />
+                               </div>
+                        <SideBar_ColumnMD4/>
+
+                    <CascadingValue Value="Movie">
+                        <TrailerComponent />
+                    </CascadingValue>
+
+                    </Animate>
+                }
+              
+                else if (setMovieType == "gridview")
+                {
+                     <Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(0.3)" Delay="TimeSpan.FromSeconds(0.3)">
+                        <GridView SetViewType="SetViewType"/>
+                    </Animate>
+                }
+                else if (setMovieType == "listview")
+                {
+                    <Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(0.3)" Delay="TimeSpan.FromSeconds(0.3)">
+                        <ListView SetViewType="SetViewType"/>
+                    </Animate>
+                }
+
+
+                 
+            @*<NewsTab/>*@
+                    @*  @if (Movie.Count == 0)
                 {
                     for (var i = 0; i < 20; i++)
                     {
@@ -29,21 +56,17 @@
                         <IndividualMovies Movie="items" />
                     }
                 }  *@
-            
-        		</div>
-	     
+
+                </div>
+
             </div>
-                  <CascadingValue Value="Movie">
-                <TrailerComponent />
-        </CascadingValue>
+           
 
-        <NewsTab/>
-            </MudPaper>
-        
-        </MudGrid>
-      
+        </MudPaper>
 
-         
+    </MudGrid>
+
+
 
     
 
@@ -51,7 +74,12 @@
 @code {
     private const string PosterUrl = "https://www.themoviedb.org/t/p/w220_and_h330_face/";
     [Parameter] public List<Movie>? Movie { get; set; }
-  
+    public string setMovieType { get; set; } = "dashboard";
+
+    void SetViewType(string SetMovieType)
+    {
+        setMovieType = SetMovieType;
+    }
 }
 
 <style>

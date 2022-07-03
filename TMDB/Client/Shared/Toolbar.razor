@@ -6,7 +6,7 @@
     <MudButton ButtonType="ButtonType.Button" Href="fetchdata" Color="_FetchActive" Class="mr-5">News</MudButton>
     <MudSpacer />
     <div class="d-flex">
-        <MudToggleIconButton @bind-Toggled="@_isOpen" Icon="@Icons.Material.Outlined.Search" Color="Color.Inherit"
+        <MudToggleIconButton @bind-Toggled="@_isOpen" Icon="@Icons.Material.Outlined.Search" Color="Color.Default"
             ToggledIcon="@Icons.Material.Outlined.Search" ToggledColor="@Color.Secondary" />
         <MudPopover Class="d-flex flex-column pa-1" Paper="false" Elevation="0" Open="@_isOpen"
             AnchorOrigin="Origin.CenterLeft" TransformOrigin="Origin.CenterRight">

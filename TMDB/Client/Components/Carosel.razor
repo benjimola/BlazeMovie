@@ -66,7 +66,7 @@
 
     private const string imageUrl = "https://image.tmdb.org/t/p/w1280/";
 
-   public IEnumerable<Movie>? _carousel { get; set; }
+    public IList<Movie>? _carousel { get; set; } = new List<Movie>();
     private bool arrows = true;
     private bool bullets = false;
     private bool autocycle = true;
@@ -74,7 +74,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _carousel = await Http.GetFromJsonAsync<Movie[]>($"/api/Carousel/");
+        _carousel = await Http.GetFromJsonAsync<List<Movie>>($"/api/Carousel/");
     }
 
 }

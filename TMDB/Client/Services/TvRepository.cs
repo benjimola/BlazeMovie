@@ -14,22 +14,46 @@ namespace TMDB.Client.Services
         }
         public async Task<IEnumerable<TvShow>> GetAiringToday()
         {
-           return await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetAiringToday");
+           var response = await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetAiringToday");
+            if(response == null)
+            {
+                throw new Exception("");
+            }
+
+            return response;
         }
 
         public async Task<IEnumerable<TvShow>> GetOnTheAir()
         {
-            return await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetOnTheAir");
+            var response = await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetOnTheAir");
+            if (response == null)
+            {
+                throw new Exception("");
+            }
+
+            return response;
         }
 
         public async Task<IEnumerable<TvShow>> GetPopular()
         {
-            return await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetPopular");
+            var response = await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetPopular");
+            if (response == null)
+            {
+                throw new Exception("");
+            }
+
+            return response;
         }
 
         public async Task<IEnumerable<TvShow>> GetTopRated()
         {
-            return await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetTopRated");
+            var response = await Http.GetFromJsonAsync<TvShow[]>($"/api/TvShow/GetTopRated");
+            if (response == null)
+            {
+                throw new Exception("");
+            }
+
+            return response;
         }
     }
 }

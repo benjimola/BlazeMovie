@@ -1,4 +1,4 @@
-﻿@page "/index/{page:int}"
+﻿@page "/index/{Page:int}"
 @page "/"
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
@@ -6,15 +6,9 @@
 <PageTitle>TMDB - Movies</PageTitle>
     <MudMainContent>
         <MudContainer Class="gap-0 pd-0 relative">
-    <Carosel />
-   
-         <MoviesList Movie="movies"/>
-   
-       
- 
-
-
-<MudSpacer />
+        <Carosel />
+        <MoviesList Movie="movies"/>
+        <MudSpacer />
 
 @*<div class="pagination-container">
 
@@ -59,11 +53,11 @@
         movies = await Http.GetFromJsonAsync<List<Movie>>($"/api/Movie/GetMovies/{page}");
     }
 
-    protected override async Task OnParametersSetAsync()
-    {
-        movies.Clear();
-        movies = await Http.GetFromJsonAsync<List<Movie>>($"/api/Movie/GetMovies/{Page}");
-    }
+    //protected override async Task OnParametersSetAsync()
+    //{
+    //    movies.Clear();
+    //    movies = await Http.GetFromJsonAsync<List<Movie>>($"/api/Movie/GetMovies/{Page}");
+    //}
 
 }
 

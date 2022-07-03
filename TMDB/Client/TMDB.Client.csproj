@@ -7,10 +7,22 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Components\MovieViews\Components\**" />
+	  <Content Remove="Components\MovieViews\Components\**" />
+	  <EmbeddedResource Remove="Components\MovieViews\Components\**" />
+	  <None Remove="Components\MovieViews\Components\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Content Remove="Components\TvShowList.razor" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Components\MovieViews\GridView.razor.css" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BlazorAnimate" Version="3.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.4" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.4" PrivateAssets="all" />
 		<PackageReference Include="MudBlazor" Version="6.0.9" />
@@ -31,7 +43,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Components\MovieViews\Components\" />
+	  <Content Include="Components\MovieViews\GridView.razor.css" />
 	</ItemGroup>
 
 </Project>

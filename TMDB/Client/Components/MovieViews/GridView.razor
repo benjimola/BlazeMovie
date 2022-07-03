@@ -1,0 +1,200 @@
+﻿
+@using TMDB.Client.Services
+@inject NavigationManager NavigationManager
+
+@inject IMovieRepository _repository
+
+<MudPaper Elevation="0" Style="background-color:transparent" class="page-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="topbar-filter">
+					<p>Found <span>1,608 movies</span> in total</p>
+					<label>Sort by:</label>
+					
+						
+						<select>
+							<option value="popularity">Popularity Descending</option>
+						<option value="popularity">Popularity Ascending</option>
+						<option value="rating">Rating Descending</option>
+						<option value="rating">Rating Ascending</option>
+						<option value="date">Release date Descending</option>
+						<option value="date">Release date Ascending</option>
+						</select>
+					
+					<MudLink Href="#" @onclick="@(()=> SetViewType.InvokeAsync("listview"))" class="list"><MudIcon Icon="@Icons.Outlined.FormatListBulleted" Style="margin-right:5px; margin-top:5px" Size="Size.Small" Title="ListView"/></MudLink>
+					<MudLink Href="#" @onclick="@(()=> SetViewType.InvokeAsync("gridview"))" class="grid"><MudIcon Icon="@Icons.Outlined.GridView" Style="margin-right:5px; margin-top:5px" Size="Size.Small" Title="GridView"/></MudLink>
+					
+				</div>
+				<div class="flex-wrap-movielist">
+					@if (Latest != null)
+					{
+						@foreach (var item in Latest){
+					        <Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(0.3)" Delay="TimeSpan.FromSeconds(0.3)">
+
+							<div class="movie-item-style-2 movie-item-style-1">
+							<MudImage Src="@("https://www.themoviedb.org/t/p/w342/"+ @item.PosterPath)" alt="@item.Title"/>
+							<div class="hvr-inner">
+	            				<a  href="#"> More <i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@item.Title</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+							</div>
+						</div>	
+						</Animate>
+						}
+					}																			
+				</div>		
+				<div class="topbar-filter">
+					<label>Movies per page:</label>
+					<select>
+						<option value="range">20 Movies</option>
+						<option value="saab">10 Movies</option>
+					</select>
+					
+					@*<div class="pagination2">*@
+						<MudPagination Selected="Page" 
+							SelectedChanged="pageChanged" Size="Size.Small" Color="Color.Tertiary"
+							Variant="Variant.Outlined" Count="TotalPage"/>
+					@*</div>*@
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<MudPaper Elevation="0"  Outlined="false" Style="background-color:transparent" class="sidebar" >
+					<MudPaper Elevation="0"  Outlined="false" class="searh-form"  style="background-color:transparent;">
+						<h4 class="sb-title">Search for movie</h4>
+						<form class="form-style-1" action="#">
+							<MudPaper Elevation="0"  Outlined="false" class="row" Style="background-color:transparent">
+								<MudPaper Elevation="0" Outlined="false" class="col-md-12 form-it" Style="background-color:transparent">
+									<label>Movie name</label>
+									<input type="text" placeholder="Enter keywords">
+								</MudPaper>
+								<div class="col-md-12 form-it">
+									<label>Genres & Subgenres</label>
+									<div class="group-ip">
+										<select
+											name="skills" multiple="" class="ui fluid dropdown">
+											<option value="">Enter to filter genres</option>
+											<option value="Action1">Action 1</option>
+					                        <option value="Action2">Action 2</option>
+					                        <option value="Action3">Action 3</option>
+					                        <option value="Action4">Action 4</option>
+					                        <option value="Action5">Action 5</option>
+										</select>
+									</div>	
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Rating Range</label>
+									<select>
+									  <option value="range">-- Select the rating range below --</option>
+									  <option value="saab">-- Select the rating range below --</option>
+									</select>
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Release Year</label>
+									<div class="row">
+										<div class="col-md-6">
+											<select>
+											  <option value="range">From</option>
+											  <option value="number">10</option>
+											</select>
+										</div>
+										<div class="col-md-6">
+											<select>
+											  <option value="range">To</option>
+											  <option value="number">20</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 ">
+									<input class="submit" type="submit" value="submit">
+								</div>
+							</MudPaper>
+						</form>
+					</MudPaper>
+				@*	<div class="ads">
+						<img src="images/uploads/ads1.png" alt="">
+					</div>*@
+					@*<div class="sb-facebook sb-it">
+						<h4 class="sb-title">Find us on Facebook</h4>
+						<iframe src="#" data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftemplatespoint.net%2F%3Ffref%3Dts&tabs=timeline&width=340&height=315px&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"  height="315" style="width:100%;border:none;overflow:hidden" ></iframe>
+					</div>
+					<div class="sb-twitter sb-it">
+						<h4 class="sb-title">Tweet to us</h4>
+						<div class="slick-tw">
+							<div class="tweet item" id=""><!-- Put your twiter id here -->
+							</div>
+							<div class="tweet item" id=""><!-- Put your 2nd twiter account id here -->
+							</div>
+						</div>					
+					</div>*@
+				</MudPaper>
+			</div>
+		</div>
+	</div>
+</MudPaper>
+
+
+@code{
+	private int _selected = 1;
+	IList<Movie>? Latest { get; set; } = new List<Movie>();
+	
+	[Parameter] public int Page { get; set; } = 1;
+
+	[Parameter] public int TotalPage { get; set; } = 500;
+
+	[Parameter] public EventCallback<string> SetViewType { get; set; } 
+
+	System.Uri uri;
+
+	private void pageChanged(int i)
+	{
+		Page = i;
+		NavigationManager.NavigateTo($"/index/{Page}");
+		GetMovies(Page);
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+
+
+		if (Page < 1 )
+		{
+			Page = 1;
+			NavigationManager.NavigateTo($"/index/{Page}");
+		}
+		uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+		Console.WriteLine(uri);
+
+		GetMovies(Page);
+	}
+
+	protected override async Task OnParametersSetAsync()
+	{
+		uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+		Console.WriteLine(uri);
+
+		if (Latest != null)
+		{
+			try{	
+				Latest.Clear();
+			}
+			catch (Exception e)
+			{
+				
+			}
+
+		}
+		
+		Latest = await _repository.GetPopular(Page);
+		
+    }
+
+	private async void GetMovies(int page)
+    {
+		
+        Latest = await _repository.GetPopular(Page);
+    }
+}
