@@ -31,9 +31,9 @@
 									<img  Width="170" Height="261" Src="@("https://www.themoviedb.org/t/p/w342/"+ @item.PosterPath)" alt="@item.Title">
 									<div class="mv-item-infor" id="listview">
 										<h6><a href="moviesingle.html">@item.Title <span>(@item.ReleaseDate.Value.Year)</span></a></h6>
-										<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+										<p class="rate"><i class="ion-android-star"></i><span>@item.VoteAverage</span> /10</p>
 										<p class="describe">@item.Overview</p>
-										<p class="run-time"> Run Time: @item.Runtime.Value    .     <span>MMPA: PG-13 </span>    .     <span>Release: @item.ReleaseDate.Value.Date.ToString("MM/dd/yyyy")</span></p>
+										<p class="run-time"> Run Time: @item.Runtime    .     <span>MMPA: PG-13 </span>    .     <span>Release: @item.ReleaseDate.Value.Date.ToString("MM/dd/yyyy")</span></p>
 										<p>Director: <a href="#">Joss Whedon</a></p>
 										<p>Stars: <a href="#">Robert Downey Jr.,</a> <a href="#">Chris Evans,</a> <a href="#">  Chris Hemsworth</a></p>
 									</div>

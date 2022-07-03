@@ -598,11 +598,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Shared\\TMDB.Shared.csproj",
       "projectName": "TMDB.Shared",
-      "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\TMDB.Shared.csproj",
+      "projectPath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Shared\\TMDB.Shared.csproj",
       "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benja\\Documents\\GitHub\\BlazeMovie\\TMDB\\Shared\\obj\\",
+      "outputPath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
