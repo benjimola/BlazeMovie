@@ -14,6 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Remove="Components\ModalDialog.razor" />
 	  <Content Remove="Components\TvShowList.razor" />
 	</ItemGroup>
 
@@ -39,11 +40,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Components\ModalDialog.razor" />
 	  <_ContentIncludedByDefault Remove="Components\TvShowList.razor" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="Components\MovieViews\GridView.razor.css" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Components\ModalDialog.razor" />
 	</ItemGroup>
 
 </Project>

@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = TMDB.Shared
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\
+=======
+build_property.ProjectDir = C:\Users\benja\Documents\GitHub\BlazeMovie\tmdb\Shared\
+>>>>>>> parent of e0f86cc (Added TvShow Tab with Tweaks to data access)

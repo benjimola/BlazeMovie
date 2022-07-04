@@ -1,13 +1,12 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{DF60DA60-F37E-4F7D-B6C8-8D913B8CACE6}") = "TMDB.Server", "Server\TMDB.Server.csproj", "{7591F28D-0F2D-4B4A-AA5F-B95807DD21D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMDB.Server", "Server\TMDB.Server.csproj", "{7591F28D-0F2D-4B4A-AA5F-B95807DD21D7}"
 EndProject
-Project("{DF60DA60-F37E-4F7D-B6C8-8D913B8CACE6}") = "TMDB.Client", "Client\TMDB.Client.csproj", "{E7876479-97D0-4A46-A362-4BCFFA73269C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMDB.Client", "Client\TMDB.Client.csproj", "{E7876479-97D0-4A46-A362-4BCFFA73269C}"
 EndProject
-Project("{DF60DA60-F37E-4F7D-B6C8-8D913B8CACE6}") = "TMDB.Shared", "Shared\TMDB.Shared.csproj", "{D17365E5-3314-4D09-9275-1DB30457A703}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMDB.Shared", "Shared\TMDB.Shared.csproj", "{D17365E5-3314-4D09-9275-1DB30457A703}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

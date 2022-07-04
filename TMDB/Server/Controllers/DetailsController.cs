@@ -16,7 +16,7 @@ namespace TMDB.Server.Controllers
         {
             Movie movie = new Movie();
             TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
-            movie = await client.GetMovieAsync(id, MovieMethods.Credits | MovieMethods.Videos | MovieMethods.WatchProviders | MovieMethods.Similar | MovieMethods.ReleaseDates);
+            movie = await client.GetMovieAsync(id, MovieMethods.Credits | MovieMethods.Videos | MovieMethods.WatchProviders | MovieMethods.Similar | MovieMethods.ReleaseDates | MovieMethods.Keywords | MovieMethods.Reviews | MovieMethods.Images);
             return Ok(movie);
         }
 

@@ -34,6 +34,7 @@ C:\Users\benja\Documents\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.dll
 C:\Users\benja\Documents\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\refint\TMDB.Shared.dll
 C:\Users\benja\Documents\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.pdb
 C:\Users\benja\Documents\BlazeMovie\TMDB\Shared\obj\Debug\net6.0\ref\TMDB.Shared.dll
+<<<<<<< HEAD
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\bin\Debug\net6.0\TMDB.Shared.deps.json
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\bin\Debug\net6.0\TMDB.Shared.dll
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\bin\Debug\net6.0\TMDB.Shared.pdb
@@ -46,3 +47,5 @@ C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\obj\Debug\net6.0\refint\TMDB.Shared.dll
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\obj\Debug\net6.0\TMDB.Shared.pdb
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Shared\obj\Debug\net6.0\ref\TMDB.Shared.dll
+=======
+>>>>>>> parent of e0f86cc (Added TvShow Tab with Tweaks to data access)

@@ -33,13 +33,13 @@
 					        <Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(0.3)" Delay="TimeSpan.FromSeconds(0.3)">
 
 							<div class="movie-item-style-2 movie-item-style-1">
-							<MudImage Src="@("https://www.themoviedb.org/t/p/w342/"+ @item.PosterPath)" alt="@item.Title"/>
+							<img src="@("https://www.themoviedb.org/t/p/w342/"+ @item.PosterPath)" alt="@item.Title"/>
 							<div class="hvr-inner">
-	            				<a  href="#"> More <i class="ion-android-arrow-dropright"></i> </a>
+	            				<MudLink onclick="@(()=>ShowDetails(item.Id, item.Title))"> More <i class="ion-android-arrow-dropright"></i> </MudLink>
 	            			</div>
 							<div class="mv-item-infor">
 								<h6><a href="#">@item.Title</a></h6>
-								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+								<p class="rate"><i class="ion-android-star"></i><span>@item.VoteAverage</span> /10</p>
 							</div>
 						</div>	
 						</Animate>
@@ -138,7 +138,7 @@
 
 
 @code{
-	private int _selected = 1;
+	//private int _selected = 1;
 	IList<Movie>? Latest { get; set; } = new List<Movie>();
 	
 	[Parameter] public int Page { get; set; } = 1;
@@ -196,5 +196,10 @@
     {
 		
         Latest = await _repository.GetPopular(Page);
+    }
+
+	private void ShowDetails(int Id, string title)
+    {
+        NavigationManager.NavigateTo($"/Movie/{Id}/{title.Replace(" ", "-")}");
     }
 }

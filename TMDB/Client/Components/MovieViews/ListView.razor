@@ -1,6 +1,8 @@
 ﻿
 @using TMDB.Client.Services
+@using TMDbLib.Objects.Credit
 @inject NavigationManager NavigationManager
+@inject HttpClient Http
 
 @inject IMovieRepository _repository
 
@@ -24,18 +26,25 @@
 				</div>
 				@if (Latest != null)
 				{
-					@foreach (var item in Latest)
+					@foreach (var item in Latest ) 
 					{
-						<Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(0.3)" Delay="TimeSpan.FromSeconds(0.3)">
+						
+					<Animate Animation="Animations.FadeUp" Duration="TimeSpan.FromSeconds(0.3)" Delay="TimeSpan.FromSeconds(0.3)">
 								<div class="movie-item-style-2" id="list">
 									<img  Width="170" Height="261" Src="@("https://www.themoviedb.org/t/p/w342/"+ @item.PosterPath)" alt="@item.Title">
 									<div class="mv-item-infor" id="listview">
 										<h6><a href="moviesingle.html">@item.Title <span>(@item.ReleaseDate.Value.Year)</span></a></h6>
 										<p class="rate"><i class="ion-android-star"></i><span>@item.VoteAverage</span> /10</p>
 										<p class="describe">@item.Overview</p>
-										<p class="run-time"> Run Time: @item.Runtime    .     <span>MMPA: PG-13 </span>    .     <span>Release: @item.ReleaseDate.Value.Date.ToString("MM/dd/yyyy")</span></p>
-										<p>Director: <a href="#">Joss Whedon</a></p>
-										<p>Stars: <a href="#">Robert Downey Jr.,</a> <a href="#">Chris Evans,</a> <a href="#">  Chris Hemsworth</a></p>
+										<p class="run-time"> Run Time: @item.Runtime    .     <span>MMPA: PG-13 </span>    .     <span>Release: @item.ReleaseDate.Value.Date.ToString("MM/dd/yyyy")</span></p>									
+										
+										<p>Director: <a href="#"> Director here </a></p>
+										<p>Stars:
+										
+								
+												<a href="#">@item.Credits</a> 
+
+										</p>
 									</div>
 								</div>
 						</Animate>
@@ -67,14 +76,7 @@
 								<div class="col-md-12 form-it">
 									<label>Genres &amp; Subgenres</label>
 									<div class="group-ip">
-										<div class="ui fluid dropdown selection multiple" tabindex="0"><select name="skills" multiple="">
-											<option value="">Enter to filter genres</option>
-											<option value="Action1">Action 1</option>
-					                        <option value="Action2">Action 2</option>
-					                        <option value="Action3">Action 3</option>
-					                        <option value="Action4">Action 4</option>
-					                        <option value="Action5">Action 5</option>
-										</select><i class="dropdown icon"></i><div class="default text">Enter to filter genres</div><div class="menu" tabindex="-1"><div class="item" data-value="Action1">Action 1</div><div class="item" data-value="Action2">Action 2</div><div class="item" data-value="Action3">Action 3</div><div class="item" data-value="Action4">Action 4</div><div class="item" data-value="Action5">Action 5</div></div></div>
+										<p>Form goes here</p>
 									</div>
 									
 								</div>
@@ -111,8 +113,8 @@
 									</div>
 								</div>
 								<div class="col-md-12 ">
-									<input class="submit" type="submit" value="submit">
-								</div>
+									<MudButton Variant="Variant.Outlined" FullWidth="true" Color="Color.Primary">Submit</MudButton>
+							</div>
 							</div>
 						</form>
 					</div>
@@ -141,14 +143,17 @@
 
 						
 @code{
-	private int _selected = 1;
+	//private int _selected = 1;
 	IList<Movie>? Latest { get; set; } = new List<Movie>();
-	
+
+	IEnumerable<Credit>? cast { get; set; } 
+
 	[Parameter] public int Page { get; set; } = 1;
 
 	[Parameter] public int TotalPage { get; set; } = 500;
 
 	[Parameter] public EventCallback<string> SetViewType { get; set; } 
+
 
 	System.Uri uri;
 
@@ -186,19 +191,31 @@
 			}
 			catch (Exception e)
 			{
-				
+
 			}
 
 		}
-		
+
 		Latest = await _repository.GetPopular(Page);
-		
-    }
+
+	}
 
 	private async void GetMovies(int page)
-    {
+	{
+
+		Latest = await _repository.GetPopular(Page);
+
+	}
+
+	//async Task GetCast(int id){
+	//	string Id = id.ToString();
+	//	cast = await _repository.GetCast(Id);
 		
-        Latest = await _repository.GetPopular(Page);
+	//} 
+
+	//protected override async Task OnAfterRenderAsync(){
+
+	//}
 		
-    }
+	}
 }

@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Json;
+using TMDbLib.Objects.Credit;
 using TMDbLib.Objects.Movies;
 
 
@@ -11,6 +12,17 @@ namespace TMDB.Client.Services
         public MovieRepository(HttpClient http)
         {
             Http = http;
+        }
+
+        public async Task<IEnumerable<Credit>> GetCast(string id)
+        {
+            var response = await Http.GetFromJsonAsync<Credit[]>($"/api/Movie/GetCast{id}");
+            if (response == null)
+            {
+                throw new Exception("");
+            }
+
+            return response;
         }
 
         public async Task<IList<Movie>> GetNowPlaying()

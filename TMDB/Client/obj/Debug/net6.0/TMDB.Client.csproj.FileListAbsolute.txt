@@ -1689,6 +1689,12 @@ C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz\BhMmKTrJ.gz
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz\MTMiTZJv.gz
 C:\Users\benja\Documents\GitHub\BlazeMovie\TMDB\Client\obj\Debug\net6.0\build-gz\iBYwqW5I.gz
+C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.csproj.AssemblyReference.cache
+C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.AssemblyInfoInputs.cache
+C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.AssemblyInfo.cs
+C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.csproj.CoreCompileInputs.cache
+C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\bin\Debug\net6.0\wwwroot\_framework\BlazorAnimate.dll
@@ -2308,12 +2314,6 @@ C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\bin\Debug\net6.0\icudt_EFIGS.
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\bin\Debug\net6.0\icudt_no_CJK.dat
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\bin\Debug\net6.0\TMDB.Shared.dll
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\bin\Debug\net6.0\TMDB.Shared.pdb
-C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.csproj.AssemblyReference.cache
-C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.AssemblyInfoInputs.cache
-C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.AssemblyInfo.cs
-C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.csproj.CoreCompileInputs.cache
-C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\build-gz\h8NS04OP.gz
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\build-gz\NR++Tv+M.gz
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\build-gz\vCIdWDbZ.gz
@@ -2542,3 +2542,4 @@ C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\refint\TMDB.Client.dll
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\TMDB.Client.pdb
 C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\ref\TMDB.Client.dll
+C:\Users\benja\Desktop\BlazeMovie-main\TMDB\Client\obj\Debug\net6.0\scopedcss\Pages\MoveDetails.razor.rz.scp.css

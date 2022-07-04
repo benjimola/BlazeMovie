@@ -1,4 +1,5 @@
-﻿using TMDbLib.Objects.Movies;
+﻿using TMDbLib.Objects.Credit;
+using TMDbLib.Objects.Movies;
 
 namespace TMDB.Client.Services
 {
@@ -9,5 +10,6 @@ namespace TMDB.Client.Services
         Task<IList<Movie>> GetNowPlaying();
         Task<IList<Movie>> GetPopular();
         Task<IList<Movie>> GetPopular(int page);
+        Task<IEnumerable<Credit>> GetCast(string id);
     }
 }

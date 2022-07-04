@@ -19,6 +19,17 @@ namespace TMDB.Server.Controllers
         //    return Ok(response.Result.TotalResults);
         //}
 
+
+        [Route("GetMovies/{id}")]
+        [HttpGet]
+        public async Task<ActionResult<Credits>> GetCast(string id)
+        {
+            TMDbClient client = new TMDbClient("0bc767296e945f7da4297394b9b7fd92");
+            var response = await client.GetCreditsAsync(id,  default);
+            return Ok(response);
+        }
+
+
         [Route("GetMovies/{page:int}")]
         [HttpGet]
         public async Task<ActionResult<Movie>> GetMovies(int page)

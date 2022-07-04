@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4uyExCa0202w8y6nM0pu5JNjwDy6iLwBDgGCt0Il3wL8iCvAFj8HwKgvIp3hy1xNWA6GL4RFP5VMhf+k3eT0GQ==",
+  "dgSpecHash": "PVXvgcc/B0N9C6s4TeOj9rJyf1aXpVJj4L5DjI3AMoxIMvORvj7jsWva/hsBo7AVlorqwycNH+zEH2/2/2hhiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\Server\\TMDB.Server.csproj",
+  "projectFilePath": "C:\\Users\\benja\\Desktop\\BlazeMovie-main\\TMDB\\server\\TMDB.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\benja\\.nuget\\packages\\blazoranimate\\3.0.0\\blazoranimate.3.0.0.nupkg.sha512",
     "C:\\Users\\benja\\.nuget\\packages\\blazored.localstorage\\4.3.0-preview.1\\blazored.localstorage.4.3.0-preview.1.nupkg.sha512",
